@@ -39,6 +39,6 @@
             <TableColumn minWidth="0.0" prefWidth="114.0" text="Resultado" />
         </columns>
       </TableView>
-      <TextArea layoutX="28.0" layoutY="388.0" prefHeight="150.0" prefWidth="723.0" text="A banca examinadora considerou que o TCC precisa de considerações no seguinte aspecto." />
+      <TextArea layoutX="28.0" layoutY="388.0" prefHeight="150.0" prefWidth="723.0" promptText="A banca examinadora considerou que o TCC precisa de considerações no seguinte aspecto." />
    </children>
 </Pane>
