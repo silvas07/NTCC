@@ -69,6 +69,8 @@ public class CadastroPessoaController implements Initializable{
 
     List<String> tipo = new ArrayList<String>();
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carregarComboBoxTipo();
