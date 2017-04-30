@@ -53,33 +53,6 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="AtaDeDefesa.fxml" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/Visao/AtaDeDefesa.fxml">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="459">
-                    <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="52" />
-                    <folding>
-                      <element signature="n#padding#0;n#GridPane#0;n#!!top" expanded="false" />
-                      <element signature="n#Label#0;n#GridPane#0;n#!!top" expanded="false" />
-                      <element signature="n#HBox#0;n#GridPane#0;n#!!top" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-                <provider editor-type-id="JavaFX-Scene-Builder">
-                  <state />
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
@@ -108,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Principal.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Principal.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Visao/Principal.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+            <state relative-caret-position="230">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,21 +96,21 @@
       </file>
       <file leaf-file-name="termo de aceite.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Visao/termo de aceite.fxml">
-          <provider selected="true" editor-type-id="text-editor">
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AtaDeDefasaController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AtaDeDefasaController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
+            <state relative-caret-position="358">
               <caret line="45" column="45" lean-forward="false" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -229,10 +202,10 @@
         <option value="$PROJECT_DIR$/src/Modelo/Coordernador.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Funcionario.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Professor.java" />
-        <option value="$PROJECT_DIR$/src/Visao/Principal.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/PrincipalController.java" />
         <option value="$PROJECT_DIR$/src/Visao/AtaDeDefesa.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java" />
+        <option value="$PROJECT_DIR$/src/Visao/Principal.fxml" />
       </list>
     </option>
   </component>
@@ -835,12 +808,12 @@
       <workItem from="1493479158172" duration="1651000" />
       <workItem from="1493501155124" duration="4919000" />
       <workItem from="1493507107030" duration="9114000" />
-      <workItem from="1493517720501" duration="4777000" />
+      <workItem from="1493517720501" duration="5689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32917000" />
+    <option name="totallyTimeSpent" value="33829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1021,17 +994,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visao/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/DP0HXYTC/Rr.java" />
     <entry file="file://$PROJECT_DIR$/src/Modelo/BancaTCC.java" />
     <entry file="file://$PROJECT_DIR$/src/Modelo/CatalogoTCC.java" />
@@ -1130,17 +1092,6 @@
     <entry file="file://$PROJECT_DIR$/src/Modelo/Professor.java" />
     <entry file="file://$PROJECT_DIR$/src/Modelo/Telefone.java" />
     <entry file="file://$PROJECT_DIR$/src/Modelo/Aluno.java" />
-    <entry file="file://$PROJECT_DIR$/src/Visao/Principal.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/PrincipalController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1149,34 +1100,6 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visao/termo de aceite.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visao/CadastroPessoa.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-581">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="n#HBox#0;n#children#0;n#GridPane#0;n#!!top" expanded="false" />
-            <element signature="n#Label#1;n#children#0;n#HBox#0;n#children#0;n#GridPane#0;n#!!top" expanded="false" />
-            <element signature="n#HBox#1;n#children#0;n#GridPane#0;n#!!top" expanded="false" />
-            <element signature="n#columnConstraints#0;n#GridPane#0;n#!!top" expanded="false" />
-            <element signature="n#rowConstraints#0;n#GridPane#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CadastroPessoaController.java">
@@ -1199,6 +1122,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="45" column="45" lean-forward="false" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visao/CadastroPessoa.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-581">
+          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="n#HBox#0;n#children#0;n#GridPane#0;n#!!top" expanded="false" />
+            <element signature="n#Label#1;n#children#0;n#HBox#0;n#children#0;n#GridPane#0;n#!!top" expanded="false" />
+            <element signature="n#HBox#1;n#children#0;n#GridPane#0;n#!!top" expanded="false" />
+            <element signature="n#columnConstraints#0;n#GridPane#0;n#!!top" expanded="false" />
+            <element signature="n#rowConstraints#0;n#GridPane#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visao/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visao/AtaDeDefesa.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1214,14 +1175,26 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="45" lean-forward="false" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/Visao/termo de aceite.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visao/Principal.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>

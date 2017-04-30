@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrincipalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrincipalController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Abrir">
             <items>
-              <MenuItem  text="Cadastro" onAction="#abrirCadastro" />
-                <MenuItem text="Ata de defesa" onAction="#abrirAtaDeDefesa"></MenuItem>
-              <MenuItem mnemonicParsing="false" text="Sair" onAction="#Sair" />
+              <MenuItem onAction="#abrirCadastro" text="Cadastro" />
+                <MenuItem onAction="#abrirAtaDeDefesa" text="Ata de defesa" />
+              <MenuItem mnemonicParsing="false" onAction="#Sair" text="Sair" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Busca" />
@@ -23,6 +23,13 @@
       </MenuBar>
    </top>
    <center>
-      <Pane fx:id="CentroPrincipal" />
+      <Pane fx:id="CentroPrincipal">
+         <children>
+            <ImageView  fitHeight="653.0" fitWidth="662.0" layoutX="192.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@UNIALFA.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
    </center>
 </BorderPane>
