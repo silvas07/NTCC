@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/Visao/Principal.fxml"));
-        primaryStage.setTitle("NTT");
+        primaryStage.setTitle("NTCC");
         primaryStage.setScene(new Scene(root, 1024, 700));
         primaryStage.show();
     }

@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrincipalController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Abrir">
             <items>
-              <MenuItem mnemonicParsing="false" text="Cadastro" />
-              <MenuItem mnemonicParsing="false" text="Declarações" />
+              <MenuItem  text="Cadastro" onAction="#abrirCadastro" />
+              <MenuItem mnemonicParsing="false" text="Sair" onAction="#Sair" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Busca" />
@@ -25,6 +22,6 @@
       </MenuBar>
    </top>
    <center>
-      <Pane prefHeight="1000" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <Pane fx:id="CentroPrincipal" />
    </center>
 </BorderPane>
