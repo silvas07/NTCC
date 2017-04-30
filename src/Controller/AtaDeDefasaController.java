@@ -11,4 +11,7 @@ public class AtaDeDefasaController {
 
     public void Editar(ActionEvent actionEvent) {
     }
+
+    public void Buscar(ActionEvent actionEvent) {
+    }
 }

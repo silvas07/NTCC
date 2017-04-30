@@ -94,12 +94,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AtaDeDefesa.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AtaDeDefesa.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Visao/AtaDeDefesa.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="261">
+              <caret line="27" column="65" lean-forward="false" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+              <folding>
+                <element signature="n#padding#0;n#GridPane#0;n#!!top" expanded="false" />
+                <element signature="n#Label#0;n#GridPane#0;n#!!top" expanded="false" />
+                <element signature="n#TableView#0;n#GridPane#0;n#!!top" expanded="false" />
+                <element signature="n#HBox#0;n#GridPane#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
@@ -120,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AtaDeDefasaController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AtaDeDefasaController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="15" />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -215,8 +220,8 @@
         <option value="$PROJECT_DIR$/src/Modelo/Professor.java" />
         <option value="$PROJECT_DIR$/src/Visao/Principal.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/PrincipalController.java" />
-        <option value="$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java" />
         <option value="$PROJECT_DIR$/src/Visao/AtaDeDefesa.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java" />
       </list>
     </option>
   </component>
@@ -819,12 +824,12 @@
       <workItem from="1493479158172" duration="1651000" />
       <workItem from="1493501155124" duration="4919000" />
       <workItem from="1493507107030" duration="9114000" />
-      <workItem from="1493517720501" duration="3330000" />
+      <workItem from="1493517720501" duration="3677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31470000" />
+    <option name="totallyTimeSpent" value="31817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1183,23 +1188,28 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visao/AtaDeDefesa.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="261">
+          <caret line="27" column="65" lean-forward="false" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <folding>
+            <element signature="n#padding#0;n#GridPane#0;n#!!top" expanded="false" />
+            <element signature="n#Label#0;n#GridPane#0;n#!!top" expanded="false" />
+            <element signature="n#TableView#0;n#GridPane#0;n#!!top" expanded="false" />
+            <element signature="n#HBox#0;n#GridPane#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
