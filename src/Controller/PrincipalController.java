@@ -44,4 +44,28 @@ public class PrincipalController implements Initializable {
         CentroPrincipal.getChildren().clear();
         CentroPrincipal.getChildren().add(fxmlParent);
     }
+
+    public void abrirTermoDeAceite(ActionEvent actionEvent) throws IOException {
+        URL arquivoFXML;
+        arquivoFXML = getClass().getResource("/Visao/termoDeAceite.fxml");
+        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+        CentroPrincipal.getChildren().clear();
+        CentroPrincipal.getChildren().add(fxmlParent);
+    }
+
+    public void TermoAutorizacaoBiblioteca(ActionEvent actionEvent) throws IOException {
+        URL arquivoFXML;
+        arquivoFXML = getClass().getResource("/Visao/TermoDeAutorizaçaoBiblioteca.fxml");
+        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+        CentroPrincipal.getChildren().clear();
+        CentroPrincipal.getChildren().add(fxmlParent);
+    }
+
+    public void BuscarTCC(ActionEvent actionEvent) throws IOException {
+        URL arquivoFXML;
+        arquivoFXML = getClass().getResource("/Visao/BuscaDeTCC.fxml");
+        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+        CentroPrincipal.getChildren().clear();
+        CentroPrincipal.getChildren().add(fxmlParent);
+    }
 }

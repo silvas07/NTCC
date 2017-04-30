@@ -76,19 +76,19 @@
         <Label fx:id="LabelRepitaSenha" disable="true" text="Repita a Senha:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
         <PasswordField fx:id="PasswordFieldRepitaSenha" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="10" />
 
-        <HBox fx:id="HboxGenero"  spacing="15" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4">
+        <HBox fx:id="HboxGenero" disable="true"  spacing="15" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4">
    <children>
    
                <Label text="Genero:" />
    </children>
 
             <children>
-                <RadioButton id="rbFemea" fx:id="radioFemea" mnemonicParsing="false" prefHeight="21.0" prefWidth="80.0" text="Feminino">
+                <RadioButton  fx:id="radioFeminino" text="Feminino">
                     <toggleGroup>
-                        <ToggleGroup fx:id="groupSexo" />
+                        <ToggleGroup fx:id="groupGenero" />
                     </toggleGroup>
                 </RadioButton>
-                <RadioButton id="rbMacho" fx:id="radioMacho" mnemonicParsing="false" selected="true" text="Masculino" toggleGroup="$groupSexo" />
+                <RadioButton  fx:id="radioMascolino" text="Masculino" toggleGroup="$groupGenero" />
             </children>
         </HBox>
 
@@ -126,6 +126,5 @@
         <RowConstraints />
         <RowConstraints />
     </rowConstraints>
-
 
 </GridPane>
