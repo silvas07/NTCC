@@ -36,4 +36,12 @@ public class PrincipalController implements Initializable {
     public void Sair(ActionEvent actionEvent) {
         Platform.exit();
     }
+
+    public void abrirAtaDeDefesa(ActionEvent actionEvent) throws IOException {
+        URL arquivoFXML;
+        arquivoFXML = getClass().getResource("/Visao/AtaDeDefesa.fxml");
+        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+        CentroPrincipal.getChildren().clear();
+        CentroPrincipal.getChildren().add(fxmlParent);
+    }
 }

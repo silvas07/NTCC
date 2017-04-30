@@ -13,6 +13,7 @@
           <Menu mnemonicParsing="false" text="Abrir">
             <items>
               <MenuItem  text="Cadastro" onAction="#abrirCadastro" />
+                <MenuItem text="Ata de defesa" onAction="#abrirAtaDeDefesa"></MenuItem>
               <MenuItem mnemonicParsing="false" text="Sair" onAction="#Sair" />
             </items>
           </Menu>
