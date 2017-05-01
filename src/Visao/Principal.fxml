@@ -30,7 +30,13 @@
                   <MenuItem onAction="#BuscarTCC" text="Buscar TCC"></MenuItem>
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Help" />
+                <Menu mnemonicParsing="false" text="Help" >
+                    <items>
+                        <MenuItem text="informações" onAction="#informacoes"></MenuItem>
+                    </items>
+                </Menu>
+
+
             </menus>
         </MenuBar>
     </top>
