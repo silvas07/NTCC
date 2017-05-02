@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Created by rdsdo on 01/05/2017.
  */
-public class EmailNegocio {
+public class FuncionarioNegocio {
 
     public  boolean isEmailValid(String email) {
         if ((email == null) || (email.trim().length() == 0))
