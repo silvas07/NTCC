@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="800.0"
-            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrincipalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrincipalController">
     <top>
-        <MenuBar BorderPane.alignment="CENTER">
+        <MenuBar fx:id="MenuBarPrincipal" BorderPane.alignment="CENTER" disable="true">
             <menus>
                 <Menu mnemonicParsing="false" text="Abrir">
                     <items>
                         <MenuItem onAction="#abrirCadastro" text="Cadastro" />
+                        <MenuItem onAction="#gerarDeclaracao" text="Declaração de TCC" />
                         <MenuItem mnemonicParsing="false" onAction="#Sair" text="Sair" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Busca" >
+                <Menu mnemonicParsing="false" text="Busca">
                     <items>
-                  <MenuItem onAction="#BuscarTCC" text="Buscar TCC"></MenuItem>
+                  <MenuItem onAction="#BuscarTCC" text="Buscar Documentos" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Help" >
+                <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem text="informações" onAction="#informacoes"></MenuItem>
+                        <MenuItem onAction="#informacoes" text="informações" />
                     </items>
                 </Menu>
 
@@ -35,11 +46,27 @@
     <center>
         <Pane fx:id="CentroPrincipal">
             <children>
-                <ImageView fitHeight="585.0" fitWidth="662.0" layoutX="93.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="271.0" fitWidth="448.0" layoutX="258.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@UNIALFA.png" />
                     </image>
                 </ImageView>
+
+                <Label layoutX="241.0" layoutY="339.0" text="Login:" />
+                <TextField layoutX="289.0" layoutY="335.0" prefHeight="25.0" prefWidth="255.0" />
+
+                <Label layoutX="241.0" layoutY="378.0" text="Senha:" />
+                <PasswordField layoutX="290.0" layoutY="374.0" prefHeight="25.0" prefWidth="256.0" />
+
+                <HBox layoutX="347.0" layoutY="412.0" spacing="5">
+   <children>
+      
+                          <Button onAction="#ButtonEntrar" prefHeight="25" prefWidth="70" text="Entrar" />
+                       <Button onAction="#ButtonCancelar" prefHeight="25" prefWidth="70" text="Cancelar" />
+   </children>
+                </HBox>
+            <Label  layoutX="290.0" layoutY="318.0" textFill="RED" />
             </children></Pane>
+
     </center>
 </BorderPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="680" prefWidth="830" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="608.0" fitWidth="648.0" layoutX="97.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@UNIALFA.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
