@@ -13,6 +13,8 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/Visao/Principal.fxml"));
         primaryStage.setTitle("NTCC");
         primaryStage.setScene(new Scene(root, 830, 680));
+        primaryStage.setMaxWidth(830);
+        primaryStage.setMinHeight(680);
         primaryStage.show();
     }
 

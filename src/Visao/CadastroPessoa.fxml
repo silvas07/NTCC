@@ -28,13 +28,13 @@
     </padding>
 
     <children>
-   
+
         <Label alignment="CENTER" prefHeight="36.0" prefWidth="207.0" text="Cadastro " GridPane.columnIndex="2" GridPane.columnSpan="5">
             <font>
                 <Font name="System Bold" size="25" />
             </font>
         </Label>
-   
+
         <HBox prefHeight="25.0" prefWidth="447.0" spacing="10" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="1">
             <children>
                 <Label text="Tipo de Cadastro:" />
@@ -47,10 +47,10 @@
             </Label>
             </children>
         </HBox>
-   
+
         <Label fx:id="LabelNome" disable="true" text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
         <TextField fx:id="TextFieldNome" disable="true" prefHeight="25.0" prefWidth="205.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-   
+
         <Label fx:id="LabelSobrenome" disable="true" text="Sobrenome:" GridPane.columnIndex="3" GridPane.rowIndex="2" />
         <TextField fx:id="TextFieldSobrenome" disable="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
 
@@ -80,7 +80,7 @@
 
         <HBox fx:id="HboxGenero" disable="true"  spacing="15" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4">
    <children>
-   
+
                <Label text="Genero:" />
    </children>
 

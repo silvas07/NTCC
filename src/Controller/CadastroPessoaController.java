@@ -1,5 +1,8 @@
 package Controller;
 
+import Dao.PessoaDAO;
+import Modelo.PessoaModelo;
+import Negocio.PessoaNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -8,6 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -67,7 +71,11 @@ public class CadastroPessoaController implements Initializable{
     private HBox HboxGenero;
     @FXML
 
-    List<String> tipo = new ArrayList<String>();
+    private List<String> tipo = new ArrayList<String>();
+    private PessoaNegocio pessoaNegocio = new PessoaNegocio();
+    private PessoaModelo pessoaModelo = new PessoaModelo();
+    private String salvar = null;
+
 
 
 
@@ -90,6 +98,7 @@ public class CadastroPessoaController implements Initializable{
 
     public void selecionar(ActionEvent actionEvent) {
         String selecionar = ComboBoxTipo.getValue();
+        this.salvar = selecionar;
 
         try {
             LabelMenssagem.setText("");
@@ -190,6 +199,7 @@ public class CadastroPessoaController implements Initializable{
         LabelRepitaSenha.setDisable(true);
         PasswordFieldRepitaSenha.setDisable(true);
         HboxGenero.setDisable(true);
+        LabelSenha.setDisable(true);
     }
 
     public void limparCaixaDeTexto(){
@@ -206,11 +216,41 @@ public class CadastroPessoaController implements Initializable{
 
     }
 
-    public void salvar(ActionEvent actionEvent) {
+    public void salvar(ActionEvent actionEvent) throws SQLException {
+
+        salvaPessoa();
+        if (salvar == null){
+            LabelMenssagem.setText("Selecione um tipo de item!");
+        }else if (salvar.equals("Aluno")){
+
+        }else if(salvar.equals("Professor")){
+
+        }else if(salvar.equals("Funcionário")){
+
+
+        }
 
     }
 
     public void cancelar(ActionEvent actionEvent) throws IOException {
         limparCaixaDeTexto();
     }
+
+    public void salvaPessoa () throws SQLException {
+
+        pessoaModelo.setNome(TextFieldNome.getText());
+        pessoaModelo.setSobrenome(TextFieldSobrenome.getText());
+        pessoaModelo.setEmail(TextFieldeEmail.getText());
+        pessoaModelo.setGernero("masculino");
+        pessoaNegocio.salvarPessoa(pessoaModelo);
+
+    }
+
+    public void salvarProfessor (){}
+
+    public void salvarAluno(){}
+
+    public void salvarFuncionario(){}
+
+
 }

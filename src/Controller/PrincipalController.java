@@ -1,5 +1,6 @@
 package Controller;
 
+import Negocio.FuncionarioNegocio;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,11 +9,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,6 +28,15 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private MenuBar MenuBarPrincipal;
+
+    @FXML
+    private Label labelMenssagem;
+    @FXML
+    private TextField TextFieldLogin;
+    @FXML
+    private PasswordField PasswordFieldSenha;
+
+    FuncionarioNegocio funcionarioNegocio = new FuncionarioNegocio();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -81,12 +91,30 @@ public class PrincipalController implements Initializable {
         Platform.exit();
     }
 
-    public void verificarSenhas () throws IOException {
-        MenuBarPrincipal.setDisable(false);
+    public void configuracao(ActionEvent actionEvent) throws IOException {
         URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/TelaInicial.fxml");
-        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+        arquivoFXML = getClass().getResource("/Visao/Configuracao.fxml");
+        Parent fxmlParent = (Parent) FXMLLoader.load(arquivoFXML);
         CentroPrincipal.getChildren().clear();
         CentroPrincipal.getChildren().add(fxmlParent);
     }
+
+    public void verificarSenhas () throws IOException {
+
+
+        if(funcionarioNegocio.verificarLoginSenha(TextFieldLogin.getText() , PasswordFieldSenha.getText()).equals("NãoEntra") ) {
+            labelMenssagem.setText("Insira Login e senha!");
+        }else if (funcionarioNegocio.verificarLoginSenha(TextFieldLogin.getText() , PasswordFieldSenha.getText()).equals("Entra")){
+
+
+            MenuBarPrincipal.setDisable(false);
+            URL arquivoFXML;
+            arquivoFXML = getClass().getResource("/Visao/TelaInicial.fxml");
+            Parent fxmlParent = (Parent) FXMLLoader.load(arquivoFXML);
+            CentroPrincipal.getChildren().clear();
+            CentroPrincipal.getChildren().add(fxmlParent);
+        }
+    }
+
+
 }

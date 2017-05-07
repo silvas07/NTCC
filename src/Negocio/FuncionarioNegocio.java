@@ -1,22 +1,31 @@
 package Negocio;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+import Dao.FuncionarioDAO;
+import Modelo.FuncionarioModelo;
+
+import java.sql.SQLException;
 
 /**
  * Created by rdsdo on 01/05/2017.
  */
-public class FuncionarioNegocio {
+public class FuncionarioNegocio extends PessoaNegocio {
 
-    public  boolean isEmailValid(String email) {
-        if ((email == null) || (email.trim().length() == 0))
-            return false;
+public void salvarFuncionario (FuncionarioModelo funcionarioModelo) throws SQLException {
+    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+    funcionarioDAO.salvar(funcionarioModelo);
 
-        String emailPattern = "\\b(^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@([A-Za-z0-9-])+(\\.[A-Za-z0-9-]+)*" +
-                "((\\.[A-Za-z0-9]{2,})|(\\.[A-Za-z0-9]{2,}\\.[A-Za-z0-9]{2,}))$)\\b";
-        Pattern pattern = Pattern.compile(emailPattern, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
+}
+
+    public String verificarLoginSenha (String textFieldLogin,String passwordFieldSenha){
+        if(textFieldLogin.equals("")) {
+            return "NãoEntra";
+        }else if (passwordFieldSenha.equals("")) {
+            return "NãoEntra";
+        }else if (textFieldLogin.equals("root") && passwordFieldSenha.equals("root") ) {
+            return "Entra";
+        }
+        return "NãoEntra";
     }
 
 }

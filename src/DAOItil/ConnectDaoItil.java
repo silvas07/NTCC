@@ -1,34 +1,34 @@
 package DAOItil;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-
 
 /**
  * Created by rdsdo on 01/05/2017.
  */
-public class ConnectDao {
+public class ConnectDaoItil {
 
     private Connection connection = null;
 
-    public Connection abrirConeccao() {
+    public Connection abrirCanneccao() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/senhas", "root", "root");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ntcc", "root", "root");
             return connection;
         } catch (Exception e) {
-            e.printStackTrace();
-
+            System.out.println("Erro na conex‹o: " + e.getMessage());
         }
         return connection;
     }
 
-    public void fecharConeccao () {
+    public void facharConneccao() {
         try {
             connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Erro na conexão: " + e.getMessage());
         }
     }
+
+
 }

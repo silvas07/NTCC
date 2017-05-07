@@ -2,6 +2,7 @@ package Dao;
 
 import DAOItil.ConnectDaoItil;
 import Modelo.PessoaModelo;
+import Negocio.ProfessorNegocio;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,22 +12,21 @@ import java.sql.Statement;
 /**
  * Created by rdsdo on 01/05/2017.
  */
-public class AlunoDAO {
+public class ProfessorDAO {
     private Connection connection;
     private Statement statement;
     private PreparedStatement preparedStatement;
 
-    public AlunoDAO() {
+    public ProfessorDAO() {
         ConnectDaoItil connectDaoItil  = new  ConnectDaoItil();
         connection = connectDaoItil.abrirCanneccao();
     }
 
-    public String salvar (PessoaModelo pessoaModelo) throws SQLException {
+    public String salvar (ProfessorNegocio pessoaModelo) throws SQLException {
         String salvo = "falha";
 
         try {
             connection.setAutoCommit(false);
-
 
             preparedStatement.executeUpdate();
             connection.commit();
@@ -48,4 +48,5 @@ public class AlunoDAO {
         }
         return salvo;
     }
+
 }

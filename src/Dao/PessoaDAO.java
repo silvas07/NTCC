@@ -1,5 +1,6 @@
 package Dao;
 
+
 import DAOItil.ConnectDaoItil;
 import Modelo.PessoaModelo;
 
@@ -9,14 +10,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * Created by rdsdo on 01/05/2017.
+ * Created by rdsdo on 07/05/2017.
  */
-public class AlunoDAO {
-    private Connection connection;
-    private Statement statement;
-    private PreparedStatement preparedStatement;
+public class PessoaDAO {
 
-    public AlunoDAO() {
+ConnectDaoItil connectDaoItil = null;
+private Connection connection;
+private Statement statement;
+private PreparedStatement preparedStatement;
+
+    public PessoaDAO() {
         ConnectDaoItil connectDaoItil  = new  ConnectDaoItil();
         connection = connectDaoItil.abrirCanneccao();
     }
@@ -26,8 +29,11 @@ public class AlunoDAO {
 
         try {
             connection.setAutoCommit(false);
-
-
+            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.pessoa(nome,sobrenome,genero,email)VALUES(?,?,?,?)");
+            preparedStatement.setString(1,pessoaModelo.getNome());
+            preparedStatement.setString(2,pessoaModelo.getSobrenome());
+            preparedStatement.setString(3,pessoaModelo.getGernero());
+            preparedStatement.setString(4,pessoaModelo.getEmail());
             preparedStatement.executeUpdate();
             connection.commit();
         } catch (SQLException e) {
