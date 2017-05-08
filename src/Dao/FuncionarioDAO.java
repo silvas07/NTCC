@@ -28,7 +28,9 @@ public class FuncionarioDAO {
 
         try {
             connection.setAutoCommit(false);
-
+            preparedStatement.setString(1,pessoaModelo.getMatricula());
+            preparedStatement.setString(2,pessoaModelo.getLogin());
+            preparedStatement.setString(3,pessoaModelo.getSenha());
             preparedStatement.executeUpdate();
             connection.commit();
         } catch (SQLException e) {

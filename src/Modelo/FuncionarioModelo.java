@@ -4,10 +4,11 @@ package Modelo;
  * Created by rdsdo on 01/05/2017.
  */
 public class FuncionarioModelo {
-    int id;
-    String Login;
-    String Senha;
-    String Matricula;
+    private int id;
+    private String login;
+    private String senha;
+    private String segundaSenha;
+    private String Matricula;
 
     public int getId() {
         return id;
@@ -18,19 +19,27 @@ public class FuncionarioModelo {
     }
 
     public String getLogin() {
-        return Login;
+        return login;
     }
 
     public void setLogin(String login) {
-        Login = login;
+        this.login = login;
     }
 
     public String getSenha() {
-        return Senha;
+        return senha;
     }
 
     public void setSenha(String senha) {
-        Senha = senha;
+        this.senha = senha;
+    }
+
+    public String getSegundaSenha() {
+        return segundaSenha;
+    }
+
+    public void setSegundaSenha(String segundaSenha) {
+        this.segundaSenha = segundaSenha;
     }
 
     public String getMatricula() {

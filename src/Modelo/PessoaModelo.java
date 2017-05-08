@@ -4,12 +4,29 @@ package Modelo;
  * Created by rdsdo on 07/05/2017.
  */
 public class PessoaModelo {
-    int id;
-    String nome;
-    String sobrenome;
-    String telefone;
-    String email;
-    String gernero;
+    private int id;
+    private String nome;
+    private String sobrenome;
+    private String telefone;
+    private String email;
+    private String genero;
+    private String cpf;
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
     public int getId() {
         return id;
@@ -51,11 +68,11 @@ public class PessoaModelo {
         this.email = email;
     }
 
-    public String getGernero() {
-        return gernero;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setGernero(String gernero) {
-        this.gernero = gernero;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 }

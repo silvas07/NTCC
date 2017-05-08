@@ -4,9 +4,9 @@ package Modelo;
  * Created by rdsdo on 01/05/2017.
  */
 public class AlunoModelo extends PessoaModelo {
-    int id;
-    String Matricula;
-    String curso;
+    private int id;
+    private String Matricula;
+    private String curso;
 
     @Override
     public int getId() {

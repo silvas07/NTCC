@@ -1,6 +1,7 @@
 package Dao;
 
 import DAOItil.ConnectDaoItil;
+import Modelo.AlunoModelo;
 import Modelo.PessoaModelo;
 
 import java.sql.Connection;
@@ -21,7 +22,7 @@ public class AlunoDAO {
         connection = connectDaoItil.abrirCanneccao();
     }
 
-    public String salvar (PessoaModelo pessoaModelo) throws SQLException {
+    public String salvar (AlunoModelo alunoModelo) throws SQLException {
         String salvo = "falha";
 
         try {
@@ -29,6 +30,8 @@ public class AlunoDAO {
 
 
             preparedStatement.executeUpdate();
+            preparedStatement.setString(1,alunoModelo.getCurso());
+            preparedStatement.setString(2,alunoModelo.getMatricula());
             connection.commit();
         } catch (SQLException e) {
             if (connection != null) {

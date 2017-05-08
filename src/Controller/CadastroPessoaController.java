@@ -1,8 +1,13 @@
 package Controller;
 
-import Dao.PessoaDAO;
+import Modelo.AlunoModelo;
+import Modelo.FuncionarioModelo;
 import Modelo.PessoaModelo;
+import Modelo.ProfessorModelo;
+import Negocio.AlunoNegocio;
+import Negocio.FuncionarioNegocio;
 import Negocio.PessoaNegocio;
+import Negocio.ProfessorNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -70,10 +75,25 @@ public class CadastroPessoaController implements Initializable{
     @FXML
     private HBox HboxGenero;
     @FXML
+    private Label LabelCpf;
+    @FXML
+    private TextField TextFieldCpf;
+    @FXML
+    private RadioButton radioFeminino;
+    @FXML
+    private RadioButton radioMascolino;
+    @FXML
+    private ToggleGroup groupGenero;
 
     private List<String> tipo = new ArrayList<String>();
     private PessoaNegocio pessoaNegocio = new PessoaNegocio();
     private PessoaModelo pessoaModelo = new PessoaModelo();
+    private FuncionarioNegocio funcionarioNegocio = new FuncionarioNegocio();
+    private FuncionarioModelo funcionarioModelo = new FuncionarioModelo();
+    private AlunoNegocio alunoNegocio = new  AlunoNegocio();
+    private AlunoModelo alunoModelo = new AlunoModelo();
+    private ProfessorNegocio professorNegocio = new ProfessorNegocio();
+    private ProfessorModelo professorModelo = new ProfessorModelo();
     private String salvar = null;
 
 
@@ -132,7 +152,8 @@ public class CadastroPessoaController implements Initializable{
         LabelEmail.setDisable(false);
         TextFieldeEmail.setDisable(false);
         HboxGenero.setDisable(false);
-
+        LabelCpf.setDisable(false);
+        TextFieldCpf.setDisable(false);
 
     }
 
@@ -152,6 +173,8 @@ public class CadastroPessoaController implements Initializable{
         LabelEmail.setDisable(false);
         TextFieldeEmail.setDisable(false);
         HboxGenero.setDisable(false);
+        LabelCpf.setDisable(false);
+        TextFieldCpf.setDisable(false);
     }
 
     public void visualizarFuncionario(){
@@ -174,6 +197,8 @@ public class CadastroPessoaController implements Initializable{
         LabelRepitaSenha.setDisable(false);
         PasswordFieldRepitaSenha.setDisable(false);
         HboxGenero.setDisable(false);
+        LabelCpf.setDisable(false);
+        TextFieldCpf.setDisable(false);
 
     }
 
@@ -200,6 +225,8 @@ public class CadastroPessoaController implements Initializable{
         PasswordFieldRepitaSenha.setDisable(true);
         HboxGenero.setDisable(true);
         LabelSenha.setDisable(true);
+        LabelCpf.setDisable(true);
+        TextFieldCpf.setDisable(true);
     }
 
     public void limparCaixaDeTexto(){
@@ -213,6 +240,7 @@ public class CadastroPessoaController implements Initializable{
         TextFieldLogin.setText("");
         PasswordFieldSenha.setText("");
         PasswordFieldRepitaSenha.setText("");
+        TextFieldCpf.setText("");
 
     }
 
@@ -241,16 +269,37 @@ public class CadastroPessoaController implements Initializable{
         pessoaModelo.setNome(TextFieldNome.getText());
         pessoaModelo.setSobrenome(TextFieldSobrenome.getText());
         pessoaModelo.setEmail(TextFieldeEmail.getText());
-        pessoaModelo.setGernero("masculino");
+
+        pessoaModelo.setCpf(TextFieldCpf.getText());
+
+
+        RadioButton rb = new RadioButton();
+        rb =(RadioButton) groupGenero.getSelectedToggle();
+        String o = rb.getText();
+        pessoaModelo.setGenero(o);
+
         pessoaNegocio.salvarPessoa(pessoaModelo);
+
+
+
+        }
+
+    public void salvarProfessor () throws SQLException {
+        professorModelo.setMatricula(TextFieldMatricula.getText());
+        professorModelo.setTitulacao(TextFieldTitulacao.getText());
+        professorNegocio.salvarProfessor(professorModelo);
 
     }
 
-    public void salvarProfessor (){}
+    public void salvarAluno(){
 
-    public void salvarAluno(){}
+        alunoModelo.setCurso(TextFieldCurso.getText());
+        alunoModelo.setMatricula(TextFieldMatricula.getText());
+    }
 
-    public void salvarFuncionario(){}
+    public void salvarFuncionario(){
+        funcionarioModelo.setSenha(PasswordFieldSenha.getText());
+        funcionarioModelo.setSegundaSenha(PasswordFieldRepitaSenha.getText());
 
-
+    }
 }
