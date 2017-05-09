@@ -3,7 +3,7 @@ package Modelo;
 /**
  * Created by rdsdo on 01/05/2017.
  */
-public class ProfessorModelo {
+public class ProfessorModelo extends PessoaModelo {
     private int id;
     private String matricula;
     private String titulacao;

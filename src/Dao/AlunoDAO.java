@@ -27,12 +27,17 @@ public class AlunoDAO {
 
         try {
             connection.setAutoCommit(false);
-
-
+            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.aluno(nome,sobrenome,genero,email,matricula,curso,telefone)VALUES(?,?,?,?,?,?,?)");
+            preparedStatement.setString(1,alunoModelo.getNome());
+            preparedStatement.setString(2,alunoModelo.getSobrenome());
+            preparedStatement.setString(3,alunoModelo.getGenero());
+            preparedStatement.setString(4,alunoModelo.getEmail());
+            preparedStatement.setString(5,alunoModelo.getMatricula());
+            preparedStatement.setString(6,alunoModelo.getCurso());
+            preparedStatement.setString(7,alunoModelo.getTelefone());
             preparedStatement.executeUpdate();
-            preparedStatement.setString(1,alunoModelo.getCurso());
-            preparedStatement.setString(2,alunoModelo.getMatricula());
             connection.commit();
+
         } catch (SQLException e) {
             if (connection != null) {
                 try {

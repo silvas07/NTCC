@@ -29,11 +29,9 @@ private PreparedStatement preparedStatement;
 
         try {
             connection.setAutoCommit(false);
-            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.pessoa(nome,sobrenome,genero,email)VALUES(?,?,?,?)");
+            preparedStatement = connection.prepareStatement("");
             preparedStatement.setString(1,pessoaModelo.getNome());
-            preparedStatement.setString(2,pessoaModelo.getSobrenome());
-            preparedStatement.setString(3,pessoaModelo.getGenero());
-            preparedStatement.setString(4,pessoaModelo.getEmail());
+
             preparedStatement.executeUpdate();
             connection.commit();
         } catch (SQLException e) {

@@ -9,9 +9,26 @@ import java.sql.SQLException;
  * Created by rdsdo on 01/05/2017.
  */
 public class ProfessorNegocio extends PessoaNegocio {
+    ProfessorDAO professorDAO = new ProfessorDAO();
+
     public void salvarProfessor (ProfessorModelo professorModelo) throws SQLException {
-        ProfessorDAO professorDAO = new ProfessorDAO();
-        professorDAO.salvar(professorModelo);
+        if(!professorModelo.getNome().equals("") &&
+                !professorModelo.getSobrenome().equals("") &&
+                !professorModelo.getTitulacao().equals("") &&
+                !professorModelo.getMatricula().equals("") &&
+                !professorModelo.getEmail().equals("") ){
+
+            if(validarEmail(professorModelo.getEmail()) == true){
+                professorDAO.salvar(professorModelo);
+            }else {
+                System.out.println("E-mail incorreto"); // COLOCAR MENSSAGEM
+            }
+
+        }else {
+            System.out.println("FAltou algum campo incorreto"); // COLOCAR MENSSAGEM
+        }
+
+
     }
 
 }

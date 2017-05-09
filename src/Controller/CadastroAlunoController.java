@@ -1,6 +1,8 @@
 package Controller;
 
 
+import Modelo.AlunoModelo;
+import Negocio.AlunoNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -34,6 +36,9 @@ public class CadastroAlunoController implements Initializable{
     @FXML
     private ToggleGroup groupGenero;
 
+    AlunoModelo alunoModelo = new AlunoModelo();
+    AlunoNegocio alunoNegocio = new AlunoNegocio();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -52,9 +57,30 @@ public class CadastroAlunoController implements Initializable{
 
     }
 
+    public void getAlunoSalvar() throws SQLException {
+        alunoModelo.setNome(TextFieldNome.getText());
+        alunoModelo.setSobrenome(TextFieldSobrenome.getText());
+        alunoModelo.setMatricula(TextFieldMatricula.getText());
+        alunoModelo.setCurso(TextFieldCurso.getText());
+        alunoModelo.setEmail(TextFieldeEmail.getText());
+
+        try {
+
+            RadioButton radioButton = new RadioButton();
+            radioButton = (RadioButton) groupGenero.getSelectedToggle();
+            String genero = radioButton.getText();
+            alunoModelo.setGenero(genero);
+
+        }catch (Exception e){
+            System.out.println("Preencher geneto"); // COLOCAR MENSSAGEM
+        }
+
+        alunoNegocio.salvarAluno(alunoModelo);
+
+    }
+
     public void salvar(ActionEvent actionEvent) throws SQLException {
-
-
+        getAlunoSalvar();
 
     }
 

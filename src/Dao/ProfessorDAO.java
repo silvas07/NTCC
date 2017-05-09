@@ -1,10 +1,7 @@
 package Dao;
 
 import DAOItil.ConnectDaoItil;
-import Modelo.PessoaModelo;
 import Modelo.ProfessorModelo;
-import Negocio.ProfessorNegocio;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -27,12 +24,19 @@ public class ProfessorDAO {
         String salvo = "falha";
 
         try {
-            connection.setAutoCommit(false);
 
+            connection.setAutoCommit(false);
+            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.professor(nome,sobrenome,genero,email,matricula,titulacao,telefone)VALUES(?,?,?,?,?,?,?)");
+            preparedStatement.setString(1,professorModelo.getNome());
+            preparedStatement.setString(2,professorModelo.getSobrenome());
+            preparedStatement.setString(3,professorModelo.getGenero());
+            preparedStatement.setString(4,professorModelo.getEmail());
+            preparedStatement.setString(5,professorModelo.getMatricula());
+            preparedStatement.setString(6,professorModelo.getTitulacao());
+            preparedStatement.setString(7,professorModelo.getTelefone());
             preparedStatement.executeUpdate();
-            preparedStatement.setString(1,professorModelo.getMatricula());
-            preparedStatement.setString(2,professorModelo.getTitulacao());
             connection.commit();
+
         } catch (SQLException e) {
             if (connection != null) {
                 try {
