@@ -10,7 +10,7 @@ public class PessoaModelo {
     private String telefone;
     private String email;
     private String genero;
-    private String cpf;
+    private String Tipo;
 
     public String getTelefone() {
         return telefone;
@@ -20,12 +20,12 @@ public class PessoaModelo {
         this.telefone = telefone;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getTipo() {
+        return Tipo;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setTipo(String tipo) {
+        Tipo = tipo;
     }
 
     public int getId() {

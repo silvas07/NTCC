@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="Cadastropessoa" hgap="5" nodeOrientation="LEFT_TO_RIGHT" prefHeight="717.0" prefWidth="1024.0" vgap="15" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroProfessorController">
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <children>
+
+        <Label alignment="CENTER" prefHeight="36.0" prefWidth="614.0" text="Cadastro Professor " GridPane.columnSpan="5" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="25" />
+            </font>
+        </Label>
+
+        <Label fx:id="LabelNome" text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="TextFieldNome" prefHeight="25.0" prefWidth="316.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+
+        <Label fx:id="LabelSobrenome" text="Sobrenome:" GridPane.rowIndex="3" />
+        <TextField fx:id="TextFieldSobrenome" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+
+        <Label fx:id="LabelMatricula" text="Matricula:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="TextFieldMatricula" prefHeight="25.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label fx:id="LabelCurso" text="Titulação" GridPane.rowIndex="5" />
+        <TextField fx:id="TextFieldCurso" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+
+        <Label fx:id="LabelTelefone" text="Telefone:" GridPane.rowIndex="6" />
+        <TextField fx:id="TextFieldTelefone" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <Label fx:id="LabelEmail" text="E-mail:" GridPane.rowIndex="7" />
+        <TextField fx:id="TextFieldeEmail" prefHeight="25.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+
+
+
+        <HBox fx:id="HboxGenero" spacing="15" GridPane.columnSpan="3" GridPane.rowIndex="8">
+   <children>
+
+               <Label text="Genero:" />
+   </children>
+
+            <children>
+                <RadioButton fx:id="radioFeminino" text="Feminino">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="groupGenero" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="radioMascolino" text="Masculino" toggleGroup="$groupGenero" />
+            </children>
+        </HBox>
+
+        <HBox fx:id="HboxButoes" alignment="CENTER" spacing="5" GridPane.columnSpan="5" GridPane.rowIndex="9">
+            <children>
+                <Button onAction="#salvar" text="Salvar" />
+                <Button onAction="#cancelar" text="Cancelar" />
+            </children>
+        </HBox>
+
+
+    </children>
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints maxWidth="233.0" minWidth="209.0" prefWidth="209.0" />
+        <ColumnConstraints maxWidth="65.0" minWidth="5.0" prefWidth="59.0" />
+        <ColumnConstraints maxWidth="109.0" minWidth="39.0" prefWidth="70.0" />
+        <ColumnConstraints maxWidth="188.0" minWidth="125.0" prefWidth="126.0" />
+        <ColumnConstraints maxWidth="188.0" minWidth="148.0" prefWidth="151.0" />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
+
+</GridPane>

@@ -44,9 +44,9 @@ public class PrincipalController implements Initializable {
     }
 
 
-    public void abrirCadastro(ActionEvent actionEvent) throws IOException {
+    public void abrirCadastroProfessor(ActionEvent actionEvent) throws IOException {
         URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/CadastroPessoa.fxml");
+        arquivoFXML = getClass().getResource("/Visao/CadastroProfessor.fxml");
         Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
         CentroPrincipal.getChildren().clear();
         CentroPrincipal.getChildren().add(fxmlParent);
@@ -117,4 +117,11 @@ public class PrincipalController implements Initializable {
     }
 
 
+    public void abrirCadastroAluno(ActionEvent actionEvent) throws IOException {
+        URL arquivoFXML;
+        arquivoFXML = getClass().getResource("/Visao/CadastroAluno.fxml");
+        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+        CentroPrincipal.getChildren().clear();
+        CentroPrincipal.getChildren().add(fxmlParent);
+    }
 }
