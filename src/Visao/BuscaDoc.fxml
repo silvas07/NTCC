@@ -12,7 +12,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane hgap="10" nodeOrientation="LEFT_TO_RIGHT" prefHeight="717.0" prefWidth="1024.0" vgap="5" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BuscaDocController">
+<GridPane hgap="10" nodeOrientation="LEFT_TO_RIGHT" prefHeight="717.0"
+          prefWidth="1024.0" vgap="5" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BuscaDocController">
 
     <padding>
         <Insets bottom="15" left="10" right="10" top="15" />

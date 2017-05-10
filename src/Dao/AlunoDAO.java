@@ -27,7 +27,7 @@ public class AlunoDAO {
 
         try {
             connection.setAutoCommit(false);
-            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.aluno(nome,sobrenome,genero,email,matricula,curso,telefone)VALUES(?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.aluno(nome,sobrenome,genero,email,matricula,curso,telefone,rg)VALUES(?,?,?,?,?,?,?,?)");
             preparedStatement.setString(1,alunoModelo.getNome());
             preparedStatement.setString(2,alunoModelo.getSobrenome());
             preparedStatement.setString(3,alunoModelo.getGenero());
@@ -35,6 +35,7 @@ public class AlunoDAO {
             preparedStatement.setString(5,alunoModelo.getMatricula());
             preparedStatement.setString(6,alunoModelo.getCurso());
             preparedStatement.setString(7,alunoModelo.getTelefone());
+            preparedStatement.setString(8, alunoModelo.getRg());
             preparedStatement.executeUpdate();
             connection.commit();
 

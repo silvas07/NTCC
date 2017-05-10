@@ -16,7 +16,8 @@ public class AlunoNegocio extends  PessoaNegocio{
                 !alunoModelo.getSobrenome().equals("") &&
                 !alunoModelo.getCurso().equals("") &&
                 !alunoModelo.getMatricula().equals("") &&
-                !alunoModelo.getEmail().equals("") ){
+                !alunoModelo.getEmail().equals("") &&
+                !alunoModelo.getRg().equals("")){
 
             if(validarEmail(alunoModelo.getEmail()) == true){
                 alunoDAO.salvar(alunoModelo);

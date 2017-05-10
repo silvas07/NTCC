@@ -35,6 +35,8 @@ public class CadastroAlunoController implements Initializable{
     private RadioButton radioMascolino;
     @FXML
     private ToggleGroup groupGenero;
+    @FXML
+    private TextField TextFieldRg;
 
     AlunoModelo alunoModelo = new AlunoModelo();
     AlunoNegocio alunoNegocio = new AlunoNegocio();
@@ -48,7 +50,7 @@ public class CadastroAlunoController implements Initializable{
         TextFieldNome.setText("");
         TextFieldSobrenome.setText("");
         TextFieldMatricula.setText("");
-
+        TextFieldRg.setText("");
         TextFieldCurso.setText("");
         TextFieldTelefone.setText("");
         TextFieldeEmail.setText("");
@@ -63,6 +65,8 @@ public class CadastroAlunoController implements Initializable{
         alunoModelo.setMatricula(TextFieldMatricula.getText());
         alunoModelo.setCurso(TextFieldCurso.getText());
         alunoModelo.setEmail(TextFieldeEmail.getText());
+        alunoModelo.setRg(TextFieldRg.getText());
+
 
         try {
 

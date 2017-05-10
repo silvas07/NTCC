@@ -32,21 +32,24 @@
         <Label fx:id="LabelSobrenome" text="Sobrenome:" GridPane.rowIndex="3" />
         <TextField fx:id="TextFieldSobrenome" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
 
-        <Label fx:id="LabelMatricula" text="Matricula:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-        <TextField fx:id="TextFieldMatricula" prefHeight="25.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label fx:id="LabelRg" text="RG:" GridPane.rowIndex="4" />
+        <TextField fx:id="TextFieldRg" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-        <Label fx:id="LabelCurso" text="Curso:" GridPane.rowIndex="5" />
-        <TextField fx:id="TextFieldCurso" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+        <Label fx:id="LabelMatricula" text="Matricula:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="TextFieldMatricula" prefHeight="25.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
-        <Label fx:id="LabelTelefone" text="Telefone:" GridPane.rowIndex="6" />
-        <TextField fx:id="TextFieldTelefone" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label fx:id="LabelCurso" text="Curso:" GridPane.rowIndex="6" />
+        <TextField fx:id="TextFieldCurso" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
 
-        <Label fx:id="LabelEmail" text="E-mail:" GridPane.rowIndex="7" />
-        <TextField fx:id="TextFieldeEmail" prefHeight="25.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+        <Label fx:id="LabelTelefone" text="Telefone:" GridPane.rowIndex="7" />
+        <TextField fx:id="TextFieldTelefone" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+        <Label fx:id="LabelEmail" text="E-mail:" GridPane.rowIndex="8" />
+        <TextField fx:id="TextFieldeEmail" prefHeight="25.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="8" />
 
 
 
-        <HBox fx:id="HboxGenero" spacing="15" GridPane.columnSpan="3" GridPane.rowIndex="8">
+        <HBox fx:id="HboxGenero" spacing="15" GridPane.columnSpan="3" GridPane.rowIndex="9">
    <children>
 
                <Label text="Genero:" />
@@ -62,7 +65,7 @@
             </children>
         </HBox>
 
-        <HBox fx:id="HboxButoes" alignment="CENTER" spacing="5" GridPane.columnSpan="5" GridPane.rowIndex="9">
+        <HBox fx:id="HboxButoes" alignment="CENTER" spacing="5" GridPane.columnSpan="5" GridPane.rowIndex="10">
             <children>
                 <Button onAction="#salvar" text="Salvar" />
                 <Button onAction="#cancelar" text="Cancelar" />
@@ -87,6 +90,7 @@
         <RowConstraints />
         <RowConstraints />
         <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
         <RowConstraints />
         <RowConstraints />

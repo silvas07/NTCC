@@ -7,6 +7,16 @@ public class AlunoModelo extends PessoaModelo {
     private int id;
     private String Matricula;
     private String curso;
+    private String rg;
+
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
 
     @Override
     public int getId() {
