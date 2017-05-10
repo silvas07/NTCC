@@ -3,7 +3,7 @@ package Modelo;
 /**
  * Created by rdsdo on 01/05/2017.
  */
-public class FuncionarioModelo {
+public class FuncionarioModelo extends PessoaModelo {
     private int id;
     private String login;
     private String senha;
