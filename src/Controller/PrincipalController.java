@@ -16,6 +16,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -82,7 +83,7 @@ public class PrincipalController implements Initializable {
         CentroPrincipal.getChildren().add(fxmlParent);
     }
 
-    public void ButtonEntrar(ActionEvent actionEvent) throws IOException {
+    public void ButtonEntrar(ActionEvent actionEvent) throws IOException, SQLException {
         verificarSenhas();
 
     }
@@ -99,7 +100,7 @@ public class PrincipalController implements Initializable {
         CentroPrincipal.getChildren().add(fxmlParent);
     }
 
-    public void verificarSenhas () throws IOException {
+    public void verificarSenhas () throws IOException, SQLException {
 
 
         if(funcionarioNegocio.verificarLoginSenha(TextFieldLogin.getText() , PasswordFieldSenha.getText()).equals("NãoEntra") ) {

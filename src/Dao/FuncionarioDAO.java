@@ -4,10 +4,9 @@ import DAOItil.ConnectDaoItil;
 import Modelo.FuncionarioModelo;
 import Modelo.PessoaModelo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by rdsdo on 01/05/2017.
@@ -18,19 +17,25 @@ public class FuncionarioDAO {
     private Statement statement;
     private PreparedStatement preparedStatement;
 
+
     public FuncionarioDAO() {
         ConnectDaoItil connectDaoItil  = new  ConnectDaoItil();
         connection = connectDaoItil.abrirCanneccao();
     }
 
-    public String salvar (FuncionarioModelo pessoaModelo) throws SQLException {
+
+
+    public String salvar ( FuncionarioModelo funcionarioModelo) throws SQLException {
         String salvo = "falha";
 
         try {
             connection.setAutoCommit(false);
-            preparedStatement.setString(1,pessoaModelo.getMatricula());
-            preparedStatement.setString(2,pessoaModelo.getLogin());
-            preparedStatement.setString(3,pessoaModelo.getSenha());
+            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.funcionario(nome,sobrenome,matricula,login,senha)VALUES(?,?,?,?,?)");
+            preparedStatement.setString(1, funcionarioModelo.getNome());
+            preparedStatement.setString(2,funcionarioModelo.getSobrenome());
+            preparedStatement.setString(3, funcionarioModelo.getMatricula());
+            preparedStatement.setString(4,funcionarioModelo.getLogin());
+            preparedStatement.setString(5, funcionarioModelo.getSenha());
             preparedStatement.executeUpdate();
             connection.commit();
         } catch (SQLException e) {
@@ -51,4 +56,38 @@ public class FuncionarioDAO {
         }
         return salvo;
     }
-}
+
+    public List<FuncionarioModelo> buscar () throws SQLException{
+            List<FuncionarioModelo> listFuncionario = new ArrayList<FuncionarioModelo>();
+
+            ResultSet resposta = null;
+
+            try {
+
+
+
+                    statement = connection.createStatement();
+                    resposta = statement.executeQuery("select * from funcionario ");
+                while (resposta.next()) {
+                    FuncionarioModelo funcionarioModelo = new FuncionarioModelo();
+
+                    funcionarioModelo.setId(resposta.getInt("id"));
+                    funcionarioModelo.setNome(resposta.getString("nome"));
+                    funcionarioModelo.setSobrenome(resposta.getString("sobrenome"));
+                    funcionarioModelo.setMatricula(resposta.getString("matricula"));
+                    funcionarioModelo.setLogin(resposta.getString("login"));
+                    funcionarioModelo.setSenha(resposta.getString("Senha"));
+
+                    listFuncionario.add(funcionarioModelo);
+
+                }
+            }
+            catch (SQLException e){
+                System.out.println("Erro na consulta1:" + e.getMessage());
+            }
+            return listFuncionario ;
+
+        }
+
+    }
+

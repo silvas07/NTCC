@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -34,13 +35,15 @@ private  PasswordField PasswordFieldRepitaSenha;
     FuncionarioModelo funcionarioModelo = new FuncionarioModelo();
     FuncionarioNegocio funcionarioNegocio = new FuncionarioNegocio();
 
-    public void getFuncionario (){
+    public void getFuncionario () throws SQLException {
         funcionarioModelo.setNome(TextFieldNome.getText());
         funcionarioModelo.setSobrenome(TextFieldSobrenome.getText());
         funcionarioModelo.setMatricula(TextFieldMatricula.getText());
         funcionarioModelo.setLogin(TextFieldLogin.getText());
         funcionarioModelo.setSenha(PasswordFieldSenha.getText());
         funcionarioModelo.setSegundaSenha(PasswordFieldRepitaSenha.getText());
+
+        funcionarioNegocio.salvarFuncionario(funcionarioModelo);
     }
 
     public void limparFuncionario(){
@@ -57,7 +60,7 @@ private  PasswordField PasswordFieldRepitaSenha;
 
     }
 
-    public void salvarFuncionario(ActionEvent actionEvent) {
+    public void salvarFuncionario(ActionEvent actionEvent) throws SQLException {
         getFuncionario();
     }
 
