@@ -2,8 +2,6 @@ package Dao;
 
 import DAOItil.ConnectDaoItil;
 import Modelo.FuncionarioModelo;
-import Modelo.PessoaModelo;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
