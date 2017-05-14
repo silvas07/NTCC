@@ -125,4 +125,12 @@ public class PrincipalController implements Initializable {
         CentroPrincipal.getChildren().clear();
         CentroPrincipal.getChildren().add(fxmlParent);
     }
+
+    public void abrirCadastroTCC(ActionEvent actionEvent) throws IOException {
+        URL arquivoFXML;
+        arquivoFXML = getClass().getResource("/Visao/cadastrarTCC.fxml");
+        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
+        CentroPrincipal.getChildren().clear();
+        CentroPrincipal.getChildren().add(fxmlParent);
+    }
 }

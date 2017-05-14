@@ -1,7 +1,9 @@
 package Controller;
 
 
+import Modelo.CursoModelo;
 import Modelo.FuncionarioModelo;
+import Negocio.CursoNegocio;
 import Negocio.FuncionarioNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,21 +21,36 @@ import java.util.ResourceBundle;
 public class ConfiguracaoController implements Initializable {
 
 
-@FXML
-private TextField TextFieldNome;
-@FXML
-private TextField TextFieldSobrenome;
-@FXML
-private  TextField TextFieldMatricula;
-@FXML
-private  TextField TextFieldLogin;
-@FXML
-private PasswordField PasswordFieldSenha;
-@FXML
-private  PasswordField PasswordFieldRepitaSenha;
+    @FXML
+    private TextField TextFieldNome;
+    @FXML
+    private TextField TextFieldSobrenome;
+    @FXML
+    private  TextField TextFieldMatricula;
+    @FXML
+    private  TextField TextFieldLogin;
+    @FXML
+    private PasswordField PasswordFieldSenha;
+    @FXML
+    private  PasswordField PasswordFieldRepitaSenha;
+    @FXML
+    private TextField TextFieldCurso;
 
     FuncionarioModelo funcionarioModelo = new FuncionarioModelo();
     FuncionarioNegocio funcionarioNegocio = new FuncionarioNegocio();
+    CursoModelo cursoModelo = new CursoModelo();
+    CursoNegocio cursoNegocio = new CursoNegocio();
+
+
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+
 
     public void getFuncionario () throws SQLException {
         funcionarioModelo.setNome(TextFieldNome.getText());
@@ -55,16 +72,31 @@ private  PasswordField PasswordFieldRepitaSenha;
         PasswordFieldRepitaSenha.setText("");
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-
     public void salvarFuncionario(ActionEvent actionEvent) throws SQLException {
         getFuncionario();
+        limparFuncionario();
     }
 
     public void CancelarFuncionario(ActionEvent actionEvent) {
         limparFuncionario();
+    }
+
+
+
+
+
+    public  void  getCadastrarCurso () throws SQLException {
+        cursoModelo.setCurso(TextFieldCurso.getText());
+        cursoNegocio.salvarCurso(cursoModelo);
+    }
+
+    public void salvarCurso(ActionEvent actionEvent) throws SQLException {
+        getCadastrarCurso();
+        TextFieldCurso.setText("");
+
+    }
+
+    public void cancelarCruso(ActionEvent actionEvent) {
+        TextFieldCurso.setText("");
     }
 }

@@ -24,6 +24,8 @@
                      <items>
                               <MenuItem onAction="#abrirCadastroAluno" text="Cadastro de aluno" />
                         <MenuItem onAction="#abrirCadastroProfessor" text="Cadastro de professor" />
+                         <MenuItem onAction="#abrirCadastroTCC" text="Cadastro de TCC" />
+
                      </items>
                   </Menu>
                         <MenuItem onAction="#gerarDeclaracao" text="Declaração de TCC" />

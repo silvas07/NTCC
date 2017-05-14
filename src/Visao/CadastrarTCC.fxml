@@ -1,14 +1,20 @@
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.text.Font?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<GridPane hgap="5" nodeOrientation="LEFT_TO_RIGHT" prefHeight="717.0" prefWidth="1024.0" vgap="15" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroAlunoController">
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="5" nodeOrientation="LEFT_TO_RIGHT" prefHeight="717.0" prefWidth="1024.0" vgap="15"
+          xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastrarTCCController">
 
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
@@ -22,36 +28,55 @@
             </font>
         </Label>
 
-        <Label text="Titulo TCC:" GridPane.rowIndex="2" GridPane.columnIndex="0"></Label>
-        <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="5"></TextField>
+        <Label text="Titulo TCC:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2" />
 
-        <Label text="Data de Inicio" GridPane.rowIndex="3" GridPane.columnIndex="0" ></Label>
-        <DatePicker GridPane.rowIndex="3" GridPane.columnIndex="1"></DatePicker>
+        <Label text="Data de Inicio" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-        <Label text="Data de entrega" GridPane.rowIndex="3" GridPane.columnIndex="2" ></Label>
-        <DatePicker GridPane.rowIndex="3" GridPane.columnIndex="4"></DatePicker>
+        <Label text="Data de entrega" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <DatePicker GridPane.columnIndex="4" GridPane.rowIndex="3" />
 
-        <VBox spacing="5" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.rowSpan="3">
+        <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="92.0" spacing="5" GridPane.columnIndex="6" GridPane.rowIndex="2" GridPane.rowSpan="3">
             <children>
 
                 <Label text="Tipo TCC:" />
             </children>
 
             <children>
-                <RadioButton fx:id="radioTCC1" text="TCCI">
+                <RadioButton fx:id="radioTCC1" text="TCC I">
                     <toggleGroup>
                         <ToggleGroup fx:id="groupTCC" />
                     </toggleGroup>
                 </RadioButton>
-                <RadioButton fx:id="radioTCC2" text="TCCII" toggleGroup="$groupTCC" />
+                <RadioButton fx:id="radioTCC2" text="TCC II" toggleGroup="$groupTCC" />
             </children>
         </VBox>
 
-        
+        <Label text="Professor orientador: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <ComboBox prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-
+        <Label text="Curso:" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <ComboBox fx:id="ComboBoxCurso" prefHeight="25.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
 
 
 
     </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
 </GridPane>
