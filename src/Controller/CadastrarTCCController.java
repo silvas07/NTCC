@@ -20,12 +20,12 @@ import java.util.ResourceBundle;
 public class CadastrarTCCController implements Initializable {
 
     @FXML
-    private ComboBox<CursoModelo> ComboBoxCurso;
+    private ComboBox<String> ComboBoxCurso;
 
     List<CursoModelo> listCurso = new ArrayList<>();
     CursoModelo cursoModelo = new CursoModelo();
     CursoNegocio cursoNegocio = new CursoNegocio();
-    ObservableList<CursoModelo> observableListCurso;
+
 
 
 
@@ -42,15 +42,11 @@ public class CadastrarTCCController implements Initializable {
 
     public void carregarCombobox () throws SQLException {
         listCurso = cursoNegocio.buscarCurso();
-        observableListCurso= FXCollections.observableArrayList(listCurso);
-        ComboBoxCurso.setItems(observableListCurso);
 
-
-
-
-
-
-
+        for(int i = 0 ; i < listCurso.size(); i++) {
+            cursoModelo = listCurso.get(i);
+            ComboBoxCurso.getItems().add(cursoModelo.getCurso());
+        }
     }
 
 
