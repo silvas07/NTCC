@@ -1,11 +1,12 @@
 package Dao;
 
 import DAOItil.ConnectDaoItil;
+import Modelo.CursoModelo;
 import Modelo.ProfessorModelo;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by rdsdo on 01/05/2017.
@@ -54,6 +55,38 @@ public class ProfessorDAO {
             connection.setAutoCommit(true);
         }
         return salvo;
+    }
+
+    public List<ProfessorModelo>  buscarProfessorOrientador () throws SQLException{
+
+
+        List<ProfessorModelo> listarProfessor = new ArrayList<>();
+
+        ResultSet resposta = null;
+
+        try {
+            statement = connection.createStatement();
+            resposta = statement.executeQuery("select * from professor ");
+            while (resposta.next()) {
+
+                ProfessorModelo professorModelo = new ProfessorModelo();
+                professorModelo.setId(resposta.getInt("id"));
+                professorModelo.setNome(resposta.getString("nome"));
+                professorModelo.setSobrenome(resposta.getString("sobrenome"));
+                professorModelo.setGenero(resposta.getString("genero"));
+                professorModelo.setEmail(resposta.getString("email"));
+                professorModelo.setMatricula(resposta.getString("matricula"));
+                professorModelo.setTitulacao(resposta.getString("titulacao"));
+                professorModelo.setTelefone(resposta.getString("telefone"));
+
+                listarProfessor.add(professorModelo);
+            }
+        }
+        catch (SQLException e){
+            System.out.println("Erro na consulta1:" + e.getMessage());
+        }
+
+        return listarProfessor;
     }
 
 }
