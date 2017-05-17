@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class CursoNegocio {
     CursoDAO cursoDAO = new CursoDAO();
+    CursoModelo cursoModelo = new CursoModelo();
     List<CursoModelo> listCurso = new ArrayList<CursoModelo>();
     public void salvarCurso (CursoModelo cursoModelo) throws SQLException {
         if(!cursoModelo.getCurso().equals("")){
@@ -24,6 +25,15 @@ public class CursoNegocio {
     public List<CursoModelo> buscarCurso () throws SQLException {
         listCurso = cursoDAO.buscar();
         return listCurso;
+    }
+
+    public CursoModelo buscarCurso (String nomeCurso) throws SQLException {
+
+      cursoModelo= cursoDAO.buscarCurso(nomeCurso);
+
+      return cursoModelo;
+
+
     }
 
 

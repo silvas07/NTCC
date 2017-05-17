@@ -89,4 +89,25 @@ public class ProfessorDAO {
         return listarProfessor;
     }
 
+    public ProfessorModelo buscarProfessor (String nomeProfessor , String sobrenomeProfessor) throws SQLException{
+
+        ResultSet resultSet = null;
+        ProfessorModelo professorModelo = new ProfessorModelo();
+
+        try {
+            preparedStatement = connection.prepareStatement("select * from professor where nome= ? and sobrenome= ?");
+            preparedStatement.setString(1, nomeProfessor );
+            preparedStatement.setString(2, sobrenomeProfessor );
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                professorModelo.setId(resultSet.getInt("id"));
+                professorModelo.setNome(resultSet.getString("nome_curso"));
+            }
+        }catch (SQLException e){
+            System.out.println("Erro na consulta1:" + e.getMessage());
+        }
+        return professorModelo ;
+    }
+
 }

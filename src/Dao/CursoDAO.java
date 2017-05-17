@@ -71,4 +71,26 @@ public class CursoDAO {
         }
         return listCurso;
     }
+
+
+
+    public CursoModelo buscarCurso (String nomeCurso) throws SQLException{
+
+        ResultSet resultSet = null;
+        CursoModelo cursoModelo = new CursoModelo();
+
+        try {
+            preparedStatement = connection.prepareStatement("select * from curso where nome_curso = ?");
+            preparedStatement.setString(1, nomeCurso);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                cursoModelo.setId(resultSet.getInt("id"));
+                cursoModelo.setCurso(resultSet.getString("nome_curso"));
+            }
+        }catch (SQLException e){
+            System.out.println("Erro na consulta1:" + e.getMessage());
+        }
+        return cursoModelo;
+    }
 }

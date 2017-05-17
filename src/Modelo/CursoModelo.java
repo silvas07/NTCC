@@ -22,4 +22,6 @@ public class CursoModelo {
     public void setCurso(String curso) {
         Curso = curso;
     }
+
+
 }

@@ -2,8 +2,10 @@ package Controller;
 
 import Modelo.CursoModelo;
 import Modelo.ProfessorModelo;
+import Modelo.TCCModelo;
 import Negocio.CursoNegocio;
 import Negocio.ProfessorNegocio;
+import Negocio.TCCNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -44,6 +46,8 @@ public class CadastrarTCCController implements Initializable {
 
     ProfessorModelo professorModelo = new ProfessorModelo();
     ProfessorNegocio professorNegocio= new ProfessorNegocio();
+    TCCModelo tccModelo = new TCCModelo();
+    TCCNegocio tccNegocio = new TCCNegocio();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -109,7 +113,8 @@ public class CadastrarTCCController implements Initializable {
 
 
 
-    public void salvarTCC(ActionEvent actionEvent) {
+    public void salvarTCC(ActionEvent actionEvent) throws SQLException {
+        carregarTCC();
 
     }
 
@@ -128,7 +133,23 @@ public class CadastrarTCCController implements Initializable {
 
     }
 
-    public void carregarTCC (){
-        
+    public void carregarTCC () throws SQLException {
+
+        tccModelo.setTitulo(TextFieldTituloTCC.getText());
+        tccModelo.setDataInicio(DatePickerDataInicio.getValue());
+        tccModelo.setDataFim(DatePickerDataFim.getValue());
+        cursoModelo = cursoNegocio.buscarCurso(ComboBoxCurso.getValue());
+        tccModelo.setIdCurso(cursoModelo.getId());
+        tccModelo.setIdProfessor(professorModelo.getId());
+
+
+
+
+
+
+
+
+
+
     }
 }
