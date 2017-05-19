@@ -28,9 +28,18 @@ public class TCCDAO {
 
             try {
                 connection.setAutoCommit(false);
-                preparedStatement = connection.prepareStatement("INSERT INTO ntcc.tcc(tipo_tcc,titulo,data_inicio,data_fim,id_Curso,id_professor,id_grupoTCC)VALUES(?,?,?,?,?,?,?)");
+                preparedStatement = connection.prepareStatement("INSERT INTO ntcc.tcc(tipo_tcc,titulo,data_inicio,data_fim," +
+                        "id_Curso,id_professor,id_grupoTCC)VALUES(?,?,?,?,?,?,?)");
 
-                preparedStatement.setString(1, tccModelo.getTipoTCC());
+                preparedStatement.setString(1,tccModelo.getTipoTCC());
+                preparedStatement.setString(2, tccModelo.getTitulo());
+                preparedStatement.setDate(3, Date.valueOf(tccModelo.getDataInicio()));
+                preparedStatement.setDate(4, Date.valueOf(tccModelo.getDataFim()));
+                preparedStatement.setInt(5,tccModelo.getIdCurso());
+                preparedStatement.setInt(6, tccModelo.getIdProfessor());
+                preparedStatement.setInt(7,tccModelo.getIdGrupoTCC());
+
+
 
 
 

@@ -57,19 +57,21 @@ public class ProfessorDAO {
         return salvo;
     }
 
-    public List<ProfessorModelo>  buscarProfessorOrientador () throws SQLException{
 
 
-        List<ProfessorModelo> listarProfessor = new ArrayList<>();
+    public ProfessorModelo buscarProfessorOrientador (String matricula , String nome) throws SQLException{
 
         ResultSet resposta = null;
+        ProfessorModelo professorModelo = new ProfessorModelo();
 
         try {
-            statement = connection.createStatement();
-            resposta = statement.executeQuery("select * from professor ");
+            preparedStatement = connection.prepareStatement("select * from professor where matricula = ? or nome= ?");
+            preparedStatement.setString(1, matricula);
+            preparedStatement.setString(2,nome);
+            resposta = preparedStatement.executeQuery();
+
             while (resposta.next()) {
 
-                ProfessorModelo professorModelo = new ProfessorModelo();
                 professorModelo.setId(resposta.getInt("id"));
                 professorModelo.setNome(resposta.getString("nome"));
                 professorModelo.setSobrenome(resposta.getString("sobrenome"));
@@ -79,35 +81,16 @@ public class ProfessorDAO {
                 professorModelo.setTitulacao(resposta.getString("titulacao"));
                 professorModelo.setTelefone(resposta.getString("telefone"));
 
-                listarProfessor.add(professorModelo);
+
             }
         }
         catch (SQLException e){
             System.out.println("Erro na consulta1:" + e.getMessage());
         }
 
-        return listarProfessor;
-    }
-
-    public ProfessorModelo buscarProfessor (String nomeProfessor , String sobrenomeProfessor) throws SQLException{
-
-        ResultSet resultSet = null;
-        ProfessorModelo professorModelo = new ProfessorModelo();
-
-        try {
-            preparedStatement = connection.prepareStatement("select * from professor where nome= ? and sobrenome= ?");
-            preparedStatement.setString(1, nomeProfessor );
-            preparedStatement.setString(2, sobrenomeProfessor );
-            resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                professorModelo.setId(resultSet.getInt("id"));
-                professorModelo.setNome(resultSet.getString("nome_curso"));
-            }
-        }catch (SQLException e){
-            System.out.println("Erro na consulta1:" + e.getMessage());
-        }
         return professorModelo ;
     }
+
+
 
 }

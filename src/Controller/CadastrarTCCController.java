@@ -9,10 +9,8 @@ import Negocio.TCCNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -23,6 +21,12 @@ import java.util.ResourceBundle;
  * Created by rdsdo on 14/05/2017.
  */
 public class CadastrarTCCController implements Initializable {
+    @FXML
+    private ToggleGroup groupTCC;
+    @FXML
+    private RadioButton radioTCC2;
+    @FXML
+    private RadioButton radioTCC1;
 
     @FXML
     private ComboBox<String> ComboBoxCurso;
@@ -40,7 +44,7 @@ public class CadastrarTCCController implements Initializable {
     private DatePicker DatePickerDataFim;
 
     List<CursoModelo> listCurso = new ArrayList<>();
-    List<ProfessorModelo> listarProfessor = new ArrayList<ProfessorModelo>();
+
     CursoModelo cursoModelo = new CursoModelo();
     CursoNegocio cursoNegocio = new CursoNegocio();
 
@@ -71,47 +75,24 @@ public class CadastrarTCCController implements Initializable {
 
     public void verifiarProfessor(ActionEvent actionEvent) throws SQLException {
         buscarProfessorOrientador();
+       if (professorModelo.getNome() == null) {
+            TextFieldProfessorOrientador.setPromptText("Professor não encontrado!");
+        } else{
+            buscarProfessorOrientador();
         TextFieldProfessorOrientador.setText(professorModelo.getNome() + " " + professorModelo.getSobrenome());
         TextFieldMatriculaProfessor.setText(professorModelo.getMatricula());
-
     }
-
-    public void vrificarMatricula(ActionEvent actionEvent) {
-        TextFieldMatriculaProfessor.setVisible(true);
-        LabelMatriculaProfessor.setVisible(true);
-
 
     }
 
     public void buscarProfessorOrientador () throws SQLException {
-        listarProfessor = professorNegocio.buscarProfessorOrientador();
 
-        for (int i = 0 ; i < listarProfessor.size() ; i ++){
-            professorModelo = listarProfessor.get(i);
-            if(TextFieldMatriculaProfessor.getText().equals(professorModelo.getMatricula())){
+        professorModelo = professorNegocio.buscarProfessorOrientador(TextFieldMatriculaProfessor.getText() ,
+                TextFieldProfessorOrientador.getText());
 
-                TextFieldProfessorOrientador.setText(professorModelo.getNome() + " " + professorModelo.getSobrenome());
-                TextFieldMatriculaProfessor.setText(professorModelo.getMatricula());
 
-                break;
 
-            }else if (TextFieldProfessorOrientador.getText().equals(professorModelo.getNome())) {
-
-                TextFieldProfessorOrientador.setText(professorModelo.getNome() + " " + professorModelo.getSobrenome());
-                TextFieldMatriculaProfessor.setText(professorModelo.getMatricula());
-                break;
-            }
-        }
     }
-
-
-
-
-
-
-
-
-
 
     public void salvarTCC(ActionEvent actionEvent) throws SQLException {
         carregarTCC();
@@ -142,12 +123,18 @@ public class CadastrarTCCController implements Initializable {
         tccModelo.setIdCurso(cursoModelo.getId());
         tccModelo.setIdProfessor(professorModelo.getId());
 
+        try {
 
+            RadioButton radioButton = new RadioButton();
+            radioButton = (RadioButton) groupTCC.getSelectedToggle();
+            String tipo = radioButton.getText();
+            tccModelo.setTipoTCC(tipo);
 
+        }catch (Exception e){
+            System.out.println("Preencher geneto"); // COLOCAR MENSSAGEM
+        }
 
-
-
-
+        tccNegocio.salvarTCC(tccModelo);
 
 
 
