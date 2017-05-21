@@ -26,10 +26,8 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private Pane CentroPrincipal;
-
     @FXML
     private MenuBar MenuBarPrincipal;
-
     @FXML
     private Label labelMenssagem;
     @FXML
@@ -44,13 +42,8 @@ public class PrincipalController implements Initializable {
 
     }
 
-
     public void abrirCadastroProfessor(ActionEvent actionEvent) throws IOException {
-        URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/CadastroProfessor.fxml");
-        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
-        CentroPrincipal.getChildren().clear();
-        CentroPrincipal.getChildren().add(fxmlParent);
+        caminhoTela("/Visao/CadastroProfessor.fxml");
     }
 
     public void Sair(ActionEvent actionEvent) {
@@ -58,11 +51,7 @@ public class PrincipalController implements Initializable {
     }
 
     public void BuscarTCC(ActionEvent actionEvent) throws IOException {
-        URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/BuscaDoc.fxml");
-        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
-        CentroPrincipal.getChildren().clear();
-        CentroPrincipal.getChildren().add(fxmlParent);
+        caminhoTela("/Visao/BuscaDoc.fxml");
     }
 
     public void informacoes(ActionEvent actionEvent) throws IOException {
@@ -76,16 +65,11 @@ public class PrincipalController implements Initializable {
     }
 
     public void gerarDeclaracao(ActionEvent actionEvent) throws IOException {
-        URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/DeclaracaoTCC.fxml");
-        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
-        CentroPrincipal.getChildren().clear();
-        CentroPrincipal.getChildren().add(fxmlParent);
+       caminhoTela("/Visao/DeclaracaoTCC.fxml");
     }
 
     public void ButtonEntrar(ActionEvent actionEvent) throws IOException, SQLException {
         verificarSenhas();
-
     }
 
     public void ButtonCancelar(ActionEvent actionEvent) {
@@ -93,44 +77,36 @@ public class PrincipalController implements Initializable {
     }
 
     public void configuracao(ActionEvent actionEvent) throws IOException {
-        URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/Configuracao.fxml");
-        Parent fxmlParent = (Parent) FXMLLoader.load(arquivoFXML);
-        CentroPrincipal.getChildren().clear();
-        CentroPrincipal.getChildren().add(fxmlParent);
+       caminhoTela("/Visao/Configuracao.fxml");
     }
 
     public void verificarSenhas () throws IOException, SQLException {
-
-
         if(funcionarioNegocio.verificarLoginSenha(TextFieldLogin.getText() , PasswordFieldSenha.getText()).equals("NãoEntra") ) {
             labelMenssagem.setText("Insira Login e senha!");
         }else if (funcionarioNegocio.verificarLoginSenha(TextFieldLogin.getText() , PasswordFieldSenha.getText()).equals("Entra")){
-
-
             MenuBarPrincipal.setDisable(false);
-            URL arquivoFXML;
-            arquivoFXML = getClass().getResource("/Visao/TelaInicial.fxml");
-            Parent fxmlParent = (Parent) FXMLLoader.load(arquivoFXML);
-            CentroPrincipal.getChildren().clear();
-            CentroPrincipal.getChildren().add(fxmlParent);
+            caminhoTela("/Visao/TelaInicial.fxml");
         }
     }
 
-
     public void abrirCadastroAluno(ActionEvent actionEvent) throws IOException {
-        URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/CadastroAluno.fxml");
-        Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
-        CentroPrincipal.getChildren().clear();
-        CentroPrincipal.getChildren().add(fxmlParent);
+        caminhoTela("/Visao/CadastroAluno.fxml");
     }
 
     public void abrirCadastroTCC(ActionEvent actionEvent) throws IOException {
+        caminhoTela("/Visao/cadastrarTCC.fxml");
+    }
+
+    public void GupoTCC(ActionEvent actionEvent) throws IOException {
+        caminhoTela("/Visao/GrupoTCC.fxml");
+    }
+
+    public void caminhoTela (String caminho) throws IOException {
         URL arquivoFXML;
-        arquivoFXML = getClass().getResource("/Visao/cadastrarTCC.fxml");
+        arquivoFXML = getClass().getResource(caminho);
         Parent fxmlParent =(Parent) FXMLLoader.load(arquivoFXML);
         CentroPrincipal.getChildren().clear();
         CentroPrincipal.getChildren().add(fxmlParent);
     }
+
 }

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="GridPaneCadastroGruposTCC" hgap="20" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680" prefWidth="830" vgap="15" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GrupoTCCController">
+<padding>
+    <Insets bottom="20" left="20" right="20" top="20" />
+</padding>
+
+    <Label alignment="CENTER" prefHeight="36.0" prefWidth="614.0" text="Cadastro Grupos de TCC " GridPane.columnSpan="5" GridPane.rowIndex="0">
+        <font>
+            <Font name="System Bold" size="25" />
+        </font>
+    </Label>
+
+    <Label fx:id="LabelTituloTcc" text="Titulo do TCC:" GridPane.columnIndex="0" GridPane.rowIndex="1">    </Label>
+    <ComboBox fx:id="ComboBoxTituloTcc" editable="true" prefHeight="25.0" prefWidth="549.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+    <Button fx:id="ButtonTituloTcc" onAction="#ButtonBuscarTituloTcc" text="Buscar" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+    <Label fx:id="LabelProfessorPrientador" text="Professor orientador:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="TextFieldProfessorPrientador" prefHeight="25.0" prefWidth="308.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label fx:id="LabelMatriculaProfessorPrientador" prefHeight="8.0" prefWidth="52.0" text="Matricula:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <TextField fx:id="TextFieldMatriculaProfessorPrientador" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    <Button fx:id="ButtonProfessorPrientador" onAction="#ButtonBuscarProfessorOrientador" text="Buscar" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+
+    <Label fx:id="Label1Intregante" text="1º Intregante:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="TextField1Intregante" prefHeight="25.0" prefWidth="282.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label fx:id="LabelMatricula1Intregante" text="Matricula:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <TextField fx:id="TextFieldMatricula1Intregante" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+    <Button fx:id="Button1Intregante" onAction="#ButtonNovo1Intregante" prefHeight="25.0" prefWidth="51.0" text="Novo" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+
+    <Label fx:id="Label2Intregante" text="2º Intregante:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="TextField2Intregante" prefHeight="25.0" prefWidth="282.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label fx:id="LabelMatricula2Intregante" text="Matricula:" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <TextField fx:id="TextFieldMatricula2Intregante" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+    <Button fx:id="Button2Intregante" onAction="#ButtonNovo2Intregante" prefHeight="25.0" prefWidth="51.0" text="Novo" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+
+    <Label fx:id="Label3Intregante" text="3º Intregante:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="TextField3Intregante" prefHeight="25.0" prefWidth="282.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Label fx:id="LabelMatricula3Intregante" text="Matricula:" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <TextField fx:id="TextFieldMatricula3Intregante" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+    <Button fx:id="Button3Intregante" onAction="#ButtonNovo3Intregante" prefHeight="25.0" prefWidth="51.0" text="Novo" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+
+
+    <Label fx:id="Label4Intregante" text="4º Intregante:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <TextField fx:id="TextField4Intregante" prefHeight="25.0" prefWidth="282.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <Label fx:id="LabelMatricula4Intregante" text="Matricula:" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+    <TextField fx:id="TextFieldMatricula4Intregante" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+    <Button fx:id="Button4Intregante" onAction="#ButtonNovo4Intregante" prefHeight="25.0" prefWidth="51.0" text="Novo" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+
+
+    <Label fx:id="Label5Intregante" text="5º Intregante:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextField fx:id="TextField5Intregante" prefHeight="25.0" prefWidth="282.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Label fx:id="LabelMatricula5Intregante" text="Matricula:" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+    <TextField fx:id="TextFieldMatricula5Intregante" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+
+    <HBox visible="true" fx:id="HboxSalvarCancelar1" alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="4">
+        <Button onAction="#salvarGrupo" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+        <Button onAction="#cancelarGrupo" text="Cancelar" />
+</HBox>
+
+    <HBox visible="false" fx:id="HboxSalvarCancelar2" alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="5">
+        <Button onAction="#salvarGrupo" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+        <Button onAction="#cancelarGrupo" text="Cancelar" />
+    </HBox>
+
+    <HBox visible="false" fx:id="HboxSalvarCancelar3" alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="6">
+        <Button onAction="#salvarGrupo" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+        <Button onAction="#cancelarGrupo" text="Cancelar" />
+    </HBox>
+
+    <HBox visible="false" fx:id="HboxSalvarCancelar4" alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="7">
+        <Button onAction="#salvarGrupo" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+        <Button onAction="#cancelarGrupo" text="Cancelar" />
+    </HBox>
+
+    <HBox  visible="false" fx:id="HboxSalvarCancelar5" alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="8">
+        <Button onAction="#salvarGrupo" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+        <Button onAction="#cancelarGrupo" text="Cancelar" />
+    </HBox>
+
+</GridPane>
