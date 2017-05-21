@@ -2,11 +2,16 @@ package Dao;
 
 import DAOItil.ConnectDaoItil;
 import Modelo.CursoModelo;
+import Modelo.ProfessorModelo;
 import Modelo.TCCModelo;
+import Negocio.TCCNegocio;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.*;
+
+import static java.lang.String.valueOf;
 
 /**
  * Created by rdsdo on 15/05/2017.
@@ -65,26 +70,66 @@ public class TCCDAO {
             return salvo;
         }
 
-        public List<CursoModelo> buscar () throws SQLException{
-            List<CursoModelo> listCurso = new ArrayList<CursoModelo>();
+        public List<TCCModelo> buscarTcc() throws SQLException{
+            List<TCCModelo> listTCC = new ArrayList<TCCModelo>();
 
             ResultSet resposta = null;
 
             try {
                 statement = connection.createStatement();
-                resposta = statement.executeQuery("select * from curso ");
+                resposta = statement.executeQuery("select * from tcc ");
                 while (resposta.next()) {
 
-                    CursoModelo cursoModelo = new CursoModelo();
-                    cursoModelo.setId(resposta.getInt("id"));
-                    cursoModelo.setCurso(resposta.getString("nome_curso"));
+                    TCCModelo tccModelo = new TCCModelo();
+                    tccModelo.setId(resposta.getInt("id"));
+                    tccModelo.setTipoTCC(resposta.getString("tipo_tcc"));
+                    tccModelo.setTitulo(resposta.getString("titulo"));
+                    Date data = resposta.getDate("data_inicio");
+                    tccModelo.setDataInicio(data.toLocalDate());
+                    data = resposta.getDate("data_fim");
+                    tccModelo.setDataFim(data.toLocalDate());
+                    tccModelo.setIdCurso(resposta.getInt("id_Curso"));
+                    tccModelo.setIdProfessor(resposta.getInt("id_professor"));
+                    tccModelo.setIdGrupoTCC(resposta.getInt("id_grupoTCC"));
 
-                    listCurso.add(cursoModelo);
+
+                    listTCC.add(tccModelo);
                 }
             }
             catch (SQLException e){
                 System.out.println("Erro na consulta1:" + e.getMessage());
             }
-            return listCurso;
+            return listTCC;
         }
+
+    public List<TCCModelo> buscarTCCProfessorOrinetador (ProfessorModelo professorModelo) throws SQLException{
+
+        ResultSet resposta = null;
+        TCCModelo tccModelo = new TCCModelo();
+        List<TCCModelo> listTCC = new ArrayList<TCCModelo>();
+
+        try {
+            preparedStatement = connection.prepareStatement("select * from tcc where id_professor =  ?");
+            preparedStatement.setInt(1, professorModelo.getId() );
+            resposta = preparedStatement.executeQuery();
+
+            while (resposta.next()) {
+
+                tccModelo.setId(resposta.getInt("id"));
+                tccModelo.setTipoTCC(resposta.getString("tipo_tcc"));
+                tccModelo.setTitulo(resposta.getString("titulo"));
+                Date data = resposta.getDate("data_inicio");
+                tccModelo.setDataInicio(data.toLocalDate());
+                data = resposta.getDate("data_fim");
+                tccModelo.setDataFim(data.toLocalDate());
+                tccModelo.setIdCurso(resposta.getInt("id_Curso"));
+                tccModelo.setIdProfessor(resposta.getInt("id_professor"));
+                tccModelo.setIdGrupoTCC(resposta.getInt("id_grupoTCC"));
+                listTCC.add(tccModelo);
+            }
+        }catch (SQLException e){
+            System.out.println("Erro na consulta1:" + e.getMessage());
+        }
+        return listTCC ;
+    }
 }

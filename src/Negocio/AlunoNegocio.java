@@ -34,4 +34,10 @@ public class AlunoNegocio extends  PessoaNegocio{
 
 
     }
+
+    public AlunoModelo buscarAluno (String nomeAluno , String matricula) throws SQLException{
+        AlunoModelo alunoModelo = new AlunoModelo();
+        alunoModelo = alunoDAO.buscarAluno(nomeAluno , matricula);
+        return alunoModelo;
+    }
 }

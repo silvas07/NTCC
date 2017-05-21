@@ -2,12 +2,10 @@ package Dao;
 
 import DAOItil.ConnectDaoItil;
 import Modelo.AlunoModelo;
+import Modelo.CursoModelo;
 import Modelo.PessoaModelo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * Created by rdsdo on 01/05/2017.
@@ -56,5 +54,35 @@ public class AlunoDAO {
             connection.setAutoCommit(true);
         }
         return salvo;
+    }
+
+    public AlunoModelo buscarAluno (String nomeAluno , String matricula) throws SQLException{
+
+        ResultSet resultSet = null;
+        AlunoModelo alunoModelo = new AlunoModelo();
+
+        try {
+            preparedStatement = connection.prepareStatement("select * from aluno where nome= ? or matricula = ?");
+            preparedStatement.setString(1,nomeAluno );
+            preparedStatement.setString(2,matricula);
+            resultSet = preparedStatement.executeQuery();
+
+
+            while (resultSet.next()) {
+                alunoModelo .setId(resultSet.getInt("id"));
+                alunoModelo.setNome(resultSet.getString("nome"));
+                alunoModelo.setSobrenome(resultSet.getString("sobrenome"));
+                alunoModelo.setGenero(resultSet.getString("genero"));
+                alunoModelo.setEmail(resultSet.getString("email"));
+                alunoModelo.setMatricula(resultSet.getString("matricula"));
+                alunoModelo.setCurso(resultSet.getString("curso"));
+                alunoModelo.setTelefone(resultSet.getString("telefone"));
+                alunoModelo.setRg(resultSet.getString("rg"));
+
+            }
+        }catch (SQLException e){
+            System.out.println("Erro na consulta1:" + e.getMessage());
+        }
+        return alunoModelo;
     }
 }
