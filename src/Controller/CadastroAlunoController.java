@@ -92,9 +92,4 @@ public class CadastroAlunoController implements Initializable{
         limparCaixaDeTexto();
     }
 
-
-
-
-
-
 }

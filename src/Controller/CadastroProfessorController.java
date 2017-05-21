@@ -71,7 +71,7 @@ public class CadastroProfessorController implements Initializable{
             professorModelo.setGenero(genero);
 
         }catch (Exception e){
-            System.out.println("Preencher geneto"); // colocar mensagem
+            System.out.println("Preencher genero"); // colocar mensagem
         }
 
         professorNegocio.salvarProfessor(professorModelo);
