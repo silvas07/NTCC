@@ -13,7 +13,14 @@ public class GrupoTCCNegocio {
     GrupoTCCDAO grupoTCCDAO = new GrupoTCCDAO();
 
     public void salvarGrupoTCC (GrupoTCCModelo grupoTCCModelo) throws SQLException {
-        grupoTCCDAO.salvar(grupoTCCModelo);
+            grupoTCCDAO.salvar(grupoTCCModelo);
+    }
 
+    public  boolean testGrupo (GrupoTCCModelo grupoTCCModelo) {
+        if ((grupoTCCModelo.getIdTcc() != 0) && (grupoTCCModelo.getIdAluno() != 0)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

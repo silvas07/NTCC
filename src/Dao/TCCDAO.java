@@ -105,16 +105,16 @@ public class TCCDAO {
     public List<TCCModelo> buscarTCCProfessorOrinetador (ProfessorModelo professorModelo) throws SQLException{
 
         ResultSet resposta = null;
-        TCCModelo tccModelo = new TCCModelo();
         List<TCCModelo> listTCC = new ArrayList<TCCModelo>();
 
         try {
-            preparedStatement = connection.prepareStatement("select * from tcc where id_professor =  ?");
+            preparedStatement = connection.prepareStatement("select * from tcc where id_professor = ?");
             preparedStatement.setInt(1, professorModelo.getId() );
             resposta = preparedStatement.executeQuery();
 
-            while (resposta.next()) {
 
+            while (resposta.next()) {
+                TCCModelo tccModelo = new TCCModelo();
                 tccModelo.setId(resposta.getInt("id"));
                 tccModelo.setTipoTCC(resposta.getString("tipo_tcc"));
                 tccModelo.setTitulo(resposta.getString("titulo"));
@@ -125,8 +125,11 @@ public class TCCDAO {
                 tccModelo.setIdCurso(resposta.getInt("id_Curso"));
                 tccModelo.setIdProfessor(resposta.getInt("id_professor"));
                 tccModelo.setIdGrupoTCC(resposta.getInt("id_grupoTCC"));
+
                 listTCC.add(tccModelo);
+
             }
+
         }catch (SQLException e){
             System.out.println("Erro na consulta1:" + e.getMessage());
         }

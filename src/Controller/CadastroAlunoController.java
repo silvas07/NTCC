@@ -2,7 +2,9 @@ package Controller;
 
 
 import Modelo.AlunoModelo;
+import Modelo.CursoModelo;
 import Negocio.AlunoNegocio;
+import Negocio.CursoNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +12,8 @@ import javafx.scene.control.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -24,7 +28,7 @@ public class CadastroAlunoController implements Initializable{
     @FXML
     private TextField TextFieldMatricula;
     @FXML
-    private TextField TextFieldCurso;
+    private ComboBox<String> ComboBoxCurso;
     @FXML
     private TextField TextFieldTelefone;
     @FXML
@@ -41,17 +45,27 @@ public class CadastroAlunoController implements Initializable{
     AlunoModelo alunoModelo = new AlunoModelo();
     AlunoNegocio alunoNegocio = new AlunoNegocio();
 
+    CursoModelo cursoModelo = new CursoModelo();
+    CursoNegocio cursoNegocio = new CursoNegocio();
+    List<CursoModelo> listCurso = new ArrayList<CursoModelo>();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        try {
+            carregarCombobox();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void limparCaixaDeTexto(){
+
+    public void limparCaixaDeTexto() throws SQLException {
         TextFieldNome.setText("");
         TextFieldSobrenome.setText("");
         TextFieldMatricula.setText("");
         TextFieldRg.setText("");
-        TextFieldCurso.setText("");
+        ComboBoxCurso.getItems().clear();
+        carregarCombobox();
         TextFieldTelefone.setText("");
         TextFieldeEmail.setText("");
 
@@ -59,11 +73,23 @@ public class CadastroAlunoController implements Initializable{
 
     }
 
+
+
+
+    public void carregarCombobox () throws SQLException {
+        listCurso = cursoNegocio.buscarCurso();
+
+        for(int i = 0 ; i < listCurso.size(); i++) {
+            cursoModelo = listCurso.get(i);
+            ComboBoxCurso.getItems().add(cursoModelo.getCurso());
+        }
+    }
+
     public void getAlunoSalvar() throws SQLException {
         alunoModelo.setNome(TextFieldNome.getText());
         alunoModelo.setSobrenome(TextFieldSobrenome.getText());
         alunoModelo.setMatricula(TextFieldMatricula.getText());
-        alunoModelo.setCurso(TextFieldCurso.getText());
+        alunoModelo.setCurso(ComboBoxCurso.getValue());
         alunoModelo.setEmail(TextFieldeEmail.getText());
         alunoModelo.setRg(TextFieldRg.getText());
 
@@ -88,7 +114,7 @@ public class CadastroAlunoController implements Initializable{
 
     }
 
-    public void cancelar(ActionEvent actionEvent) throws IOException {
+    public void cancelar(ActionEvent actionEvent) throws IOException, SQLException {
         limparCaixaDeTexto();
     }
 

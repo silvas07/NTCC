@@ -132,12 +132,8 @@ public class GrupoTCCController implements Initializable {
     @FXML
     private  Button ButonBuscar5;
 
-
-
-
     @FXML
     private GridPane GridPaneCadastroGruposTCC;
-
 
     GrupoTCCModelo grupoTCCModelo = new GrupoTCCModelo();
     GrupoTCCNegocio grupoTCCNegocio = new GrupoTCCNegocio();
@@ -148,15 +144,14 @@ public class GrupoTCCController implements Initializable {
     ProfessorModelo professorModelo = new ProfessorModelo();
     ProfessorNegocio professorNegocio = new ProfessorNegocio();
 
-    AlunoModelo alunoModelo = new AlunoModelo();
+    AlunoModelo alunoModelo1 = new AlunoModelo();
+    AlunoModelo alunoModelo2 = new AlunoModelo();
+    AlunoModelo alunoModelo3 = new AlunoModelo();
+    AlunoModelo alunoModelo4 = new AlunoModelo();
+    AlunoModelo alunoModelo5 = new AlunoModelo();
     AlunoNegocio alunoNegocio = new AlunoNegocio();
 
-
-    List<GrupoTCCModelo> listgrupoTCC = new ArrayList<GrupoTCCModelo>();
     List<TCCModelo> listTCC = new ArrayList<TCCModelo>();
-    List<AlunoModelo> listAluno = new ArrayList<AlunoModelo>();
-
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources   ) {
@@ -166,38 +161,6 @@ public class GrupoTCCController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-
-    }
-
-    public void ButtonBuscarTituloTcc(ActionEvent actionEvent) throws SQLException {
-        listTCC = tccNegocio.buscarTCC();
-        carregarComboBox();
-        ButtonTituloTcc.setDisable(true);
-    }
-
-
-
-    public void ButtonBuscarProfessorOrientador(ActionEvent actionEvent) throws SQLException {
-
-      professorModelo = professorNegocio.buscarProfessorOrientador(TextFieldMatriculaProfessorOrientador.getText(),
-      TextFieldProfessorOrientador.getText());
-
-        if (professorModelo.getNome() == null) {
-            TextFieldProfessorOrientador.setPromptText("Professor não encontrado!");
-        } else {
-            ComboBoxTituloTcc.getItems().clear();
-            TextFieldProfessorOrientador.setText(professorModelo.getNome() + " " + professorModelo.getSobrenome());
-            TextFieldMatriculaProfessorOrientador.setText(professorModelo.getMatricula());
-        }
-            listTCC = tccNegocio.buscarTCCProfessorOrinetador(professorModelo);
-        carregarComboBox();
-
-        ButtonProfessorOrientador.setDisable(true);
-        ButtonTituloTcc.setDisable(true);
-
-
     }
 
     public void ButtonNovo1Intregante(ActionEvent actionEvent) throws SQLException {
@@ -205,17 +168,12 @@ public class GrupoTCCController implements Initializable {
         TextField2Intregante.setVisible(true);
         LabelMatricula2Intregante.setVisible(true);
         TextFieldMatricula2Intregante.setVisible(true);
-
         Hbox2Intregante.setVisible(true);
         ButonBuscar2.setVisible(true);
-
-
         Button2Intregante.setVisible(true);
         Button1Intregante.setVisible(false);
         HboxSalvarCancelar1.setVisible(false);
         HboxSalvarCancelar2.setVisible(true);
-
-
     }
 
     public void ButtonNovo2Intregante(ActionEvent actionEvent) {
@@ -223,11 +181,8 @@ public class GrupoTCCController implements Initializable {
         TextField3Intregante.setVisible(true);
         LabelMatricula3Intregante.setVisible(true);
         TextFieldMatricula3Intregante.setVisible(true);
-
         Hbox3Intregante.setVisible(true);
         ButonBuscar3.setVisible(true);
-
-
         Button3Intregante.setVisible(true);
         Button2Intregante.setVisible(false);
         HboxSalvarCancelar2.setVisible(false);
@@ -239,10 +194,8 @@ public class GrupoTCCController implements Initializable {
         TextField4Intregante.setVisible(true);
         LabelMatricula4Intregante.setVisible(true);
         TextFieldMatricula4Intregante.setVisible(true);
-
         Hbox4Intregante.setVisible(true);
         ButonBuscar4.setVisible(true);
-
         Button4Intregante.setVisible(true);
         Button3Intregante.setVisible(false);
         HboxSalvarCancelar3.setVisible(false);
@@ -254,32 +207,23 @@ public class GrupoTCCController implements Initializable {
         TextField5Intregante.setVisible(true);
         LabelMatricula5Intregante.setVisible(true);
         TextFieldMatricula5Intregante.setVisible(true);
-
         Hbox5Intregante.setVisible(true);
         ButonBuscar5.setVisible(true);
-
         Button4Intregante.setVisible(false);
         HboxSalvarCancelar4.setVisible(false);
         HboxSalvarCancelar5.setVisible(true);
     }
 
-    public void salvarGrupo(ActionEvent actionEvent) {
-
-    }
-
-    public void cancelarGrupo(ActionEvent actionEvent) {
-
+    public void limparCampos (){
         Button1Intregante.setVisible(true);
         Button2Intregante.setVisible(false);
         Button3Intregante.setVisible(false);
         Button4Intregante.setVisible(false);
-
         HboxSalvarCancelar1.setVisible(true);
         HboxSalvarCancelar2.setVisible(false);
         HboxSalvarCancelar3.setVisible(false);
         HboxSalvarCancelar4.setVisible(false);
         HboxSalvarCancelar5.setVisible(false);
-
         Label2Intregante.setVisible(false);
         TextField2Intregante.setVisible(false);
         LabelMatricula2Intregante.setVisible(false);
@@ -296,11 +240,9 @@ public class GrupoTCCController implements Initializable {
         TextField5Intregante.setVisible(false);
         LabelMatricula5Intregante.setVisible(false);
         TextFieldMatricula5Intregante.setVisible(false);
-
         ComboBoxTituloTcc.getItems().clear();
         TextFieldProfessorOrientador.setText("");
         TextFieldMatriculaProfessorOrientador.setText("");
-
         TextField1Intregante.setText("");
         TextFieldMatricula1Intregante.setText("");
         TextField2Intregante.setText("");
@@ -311,102 +253,150 @@ public class GrupoTCCController implements Initializable {
         TextFieldMatricula4Intregante.setText("");
         TextField5Intregante.setText("");
         TextFieldMatricula5Intregante.setText("");
-
         ButtonProfessorOrientador.setDisable(false);
         ButtonTituloTcc.setDisable(false);
-
-
         ButonBuscar1.setVisible(true);
         ButonBuscar2.setVisible(false);
         ButonBuscar3.setVisible(false);
         ButonBuscar4.setVisible(false);
         ButonBuscar5.setVisible(false);
+    }
 
-
-
+    public void cancelarGrupo(ActionEvent actionEvent) {
+        limparCampos();
     }
 
     public void carregarComboBox () throws SQLException {
-
         for (int i = 0 ; i < listTCC.size() ; i++){
             tccModelo = listTCC.get(i);
             ComboBoxTituloTcc.getItems().addAll(tccModelo.getTitulo());
-
         }
 
     }
 
-
-    public void carregarAlunos1 () throws SQLException {
-
-
-    }
-
-
     public void buscarAluno1(ActionEvent actionEvent) throws SQLException {
-        alunoModelo = alunoNegocio.buscarAluno(TextField1Intregante.getText(), TextFieldMatricula1Intregante.getText());
-        if (alunoModelo.getNome() == null) {
+        alunoModelo1=null;
+        TextField1Intregante.setText("");
+        alunoModelo1 = alunoNegocio.buscarAluno(TextField1Intregante.getText(), TextFieldMatricula1Intregante.getText());
+        if (alunoModelo1.getNome() == null) {
             TextField1Intregante.setPromptText("Aluno não encontrado.");
         } else {
-            TextField1Intregante.setText(alunoModelo.getNome() + " " + alunoModelo.getSobrenome());
-            TextFieldMatricula1Intregante.setText(alunoModelo.getMatricula());
-
-            listAluno.add(alunoModelo);
-
-
+            TextField1Intregante.setText(alunoModelo1.getNome() + " " + alunoModelo1.getSobrenome());
+            TextFieldMatricula1Intregante.setText(alunoModelo1.getMatricula());
         }
     }
 
     public void buscarAluno2(ActionEvent actionEvent) throws SQLException {
-        alunoModelo = alunoNegocio.buscarAluno(TextField2Intregante.getText(), TextFieldMatricula2Intregante.getText());
-        if (alunoModelo.getNome() == null) {
+        alunoModelo2=null;
+        TextField2Intregante.setText("");
+        alunoModelo2 = alunoNegocio.buscarAluno(TextField2Intregante.getText(), TextFieldMatricula2Intregante.getText());
+        if (alunoModelo2.getNome() == null) {
             TextField2Intregante.setPromptText("Aluno não encontrado.");
         } else {
-            TextField2Intregante.setText(alunoModelo.getNome() + " " + alunoModelo.getSobrenome());
-            TextFieldMatricula2Intregante.setText(alunoModelo.getMatricula());
-            listAluno.add(alunoModelo);
+            TextField2Intregante.setText(alunoModelo2.getNome() + " " + alunoModelo2.getSobrenome());
+            TextFieldMatricula2Intregante.setText(alunoModelo2.getMatricula());
 
         }
     }
 
     public void buscarAluno3(ActionEvent actionEvent) throws SQLException {
-        alunoModelo = alunoNegocio.buscarAluno(TextField3Intregante.getText(), TextFieldMatricula3Intregante.getText());
-        if (alunoModelo.getNome() == null) {
+        alunoModelo3=null;
+        TextField3Intregante.setText("");
+        alunoModelo3 = alunoNegocio.buscarAluno(TextField3Intregante.getText(), TextFieldMatricula3Intregante.getText());
+        if (alunoModelo3.getNome() == null) {
             TextField3Intregante.setPromptText("Aluno não encontrado.");
         } else {
-            TextField3Intregante.setText(alunoModelo.getNome() + " " + alunoModelo.getSobrenome());
-            TextFieldMatricula3Intregante.setText(alunoModelo.getMatricula());
-            listAluno.add(alunoModelo);
+            TextField3Intregante.setText(alunoModelo3.getNome() + " " + alunoModelo3.getSobrenome());
+            TextFieldMatricula3Intregante.setText(alunoModelo3.getMatricula());
 
         }
     }
 
     public void buscarAluno4(ActionEvent actionEvent) throws SQLException {
-        alunoModelo = alunoNegocio.buscarAluno(TextField4Intregante.getText(), TextFieldMatricula4Intregante.getText());
-        if (alunoModelo.getNome() == null) {
+        alunoModelo4=null;
+        TextField4Intregante.setText("");
+        alunoModelo4 = alunoNegocio.buscarAluno(TextField4Intregante.getText(), TextFieldMatricula4Intregante.getText());
+        if (alunoModelo4.getNome() == null) {
             TextField4Intregante.setPromptText("Aluno não encontrado.");
         } else {
-            TextField4Intregante.setText(alunoModelo.getNome() + " " + alunoModelo.getSobrenome());
-            TextFieldMatricula4Intregante.setText(alunoModelo.getMatricula());
-            listAluno.add(alunoModelo);
+            TextField4Intregante.setText(alunoModelo4.getNome() + " " + alunoModelo4.getSobrenome());
+            TextFieldMatricula4Intregante.setText(alunoModelo4.getMatricula());
 
         }
     }
 
     public void buscarAluno5(ActionEvent actionEvent) throws SQLException {
-        alunoModelo = alunoNegocio.buscarAluno(TextField5Intregante.getText(), TextFieldMatricula5Intregante.getText());
-        if (alunoModelo.getNome() == null) {
+        alunoModelo5=null;
+        TextField5Intregante.setText("");
+        alunoModelo5 = alunoNegocio.buscarAluno(TextField5Intregante.getText(), TextFieldMatricula5Intregante.getText());
+        if (alunoModelo5.getNome() == null) {
             TextField5Intregante.setPromptText("Aluno não encontrado.");
         } else {
-            TextField5Intregante.setText(alunoModelo.getNome() + " " + alunoModelo.getSobrenome());
-            TextFieldMatricula5Intregante.setText(alunoModelo.getMatricula());
-            listAluno.add(alunoModelo);
+            TextField5Intregante.setText(alunoModelo5.getNome() + " " + alunoModelo5.getSobrenome());
+            TextFieldMatricula5Intregante.setText(alunoModelo5.getMatricula());
 
-            for (int i = 0 ;  i < listAluno.size();i++){
-                alunoModelo = listAluno.get(i);
-                System.out.println(alunoModelo.getNome());
+        }
+    }
+
+    public void ButtonBuscarTituloTcc(ActionEvent actionEvent) throws SQLException {
+        ComboBoxTituloTcc.getItems().clear();
+        listTCC = tccNegocio.buscarTCC();
+        carregarComboBox();
+        ButtonTituloTcc.setDisable(true);
+    }
+
+    public void ButtonBuscarProfessorOrientador(ActionEvent actionEvent) throws SQLException {
+
+        listTCC =null;
+        professorModelo= null;
+        professorModelo = professorNegocio.buscarProfessorOrientador(
+                TextFieldMatriculaProfessorOrientador.getText() , TextFieldProfessorOrientador.getText());
+        if (professorModelo.getNome() == null){
+            TextFieldProfessorOrientador.setPromptText("Professor não encontrado.");
+        }else {
+            TextFieldProfessorOrientador.setText(professorModelo.getNome() + " " + professorModelo.getSobrenome());
+            TextFieldMatriculaProfessorOrientador.setText(professorModelo.getMatricula());
+            listTCC = tccNegocio.buscarTCCProfessorOrinetador(professorModelo);
+            ComboBoxTituloTcc.getItems().clear();
+            carregarComboBox();
+            ButtonTituloTcc.setDisable(true);
+            ButtonProfessorOrientador.setDisable(true);
+        }
+
+    }
+
+    public void salvarGrupo(ActionEvent actionEvent) throws SQLException {
+
+        for(int i = 0 ; i<listTCC.size() ; i++ ){
+            tccModelo = listTCC.get(i);
+            if(tccModelo.getTitulo().equals(ComboBoxTituloTcc.getValue())){
+                break;
             }
 
         }
+
+        grupoTCCModelo.setIdTcc(tccModelo.getId());
+        if (alunoModelo1.getNome() != null) {
+            grupoTCCModelo.setIdAluno(alunoModelo1.getId());
+            grupoTCCNegocio.salvarGrupoTCC(grupoTCCModelo);
+        }
+        if (alunoModelo2.getNome() != null) {
+            grupoTCCModelo.setIdAluno(alunoModelo2.getId());
+            grupoTCCNegocio.salvarGrupoTCC(grupoTCCModelo);
+        }
+        if (alunoModelo3.getNome() != null) {
+            grupoTCCModelo.setIdAluno(alunoModelo3.getId());
+            grupoTCCNegocio.salvarGrupoTCC(grupoTCCModelo);
+        }
+        if (alunoModelo4.getNome() != null) {
+            grupoTCCModelo.setIdAluno(alunoModelo4.getId());
+            grupoTCCNegocio.salvarGrupoTCC(grupoTCCModelo);
+        }
+        if (alunoModelo5.getNome() != null) {
+            grupoTCCModelo.setIdAluno(alunoModelo5.getId());
+            grupoTCCNegocio.salvarGrupoTCC(grupoTCCModelo);
+        }
+        limparCampos();
+
     }
 }

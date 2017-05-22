@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software Projeto integrador/Controller/GrupoTCCController.class" afterPath="$PROJECT_DIR$/out/production/Software Projeto integrador/Controller/GrupoTCCController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software Projeto integrador/Dao/TCCDAO.class" afterPath="$PROJECT_DIR$/out/production/Software Projeto integrador/Dao/TCCDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software Projeto integrador/Negocio/GrupoTCCNegocio.class" afterPath="$PROJECT_DIR$/out/production/Software Projeto integrador/Negocio/GrupoTCCNegocio.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/CadastroAlunoController.java" afterPath="$PROJECT_DIR$/src/Controller/CadastroAlunoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/CadastroProfessorController.java" afterPath="$PROJECT_DIR$/src/Controller/CadastroProfessorController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/GrupoTCCController.java" afterPath="$PROJECT_DIR$/src/Controller/GrupoTCCController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dao/TCCDAO.java" afterPath="$PROJECT_DIR$/src/Dao/TCCDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Negocio/GrupoTCCNegocio.java" afterPath="$PROJECT_DIR$/src/Negocio/GrupoTCCNegocio.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Visao/CadastroAluno.fxml" afterPath="$PROJECT_DIR$/src/Visao/CadastroAluno.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,68 +74,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PrincipalController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/PrincipalController.java">
+      <file leaf-file-name="GrupoTCCController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/GrupoTCCController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="70" column="22" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+            <state relative-caret-position="1666">
+              <caret line="113" column="17" lean-forward="false" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
               <folding>
-                <element signature="method#initialize#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#abrirCadastroProfessor#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#BuscarTCC#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#informacoes#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#gerarDeclaracao#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#ButtonEntrar#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#configuracao#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#abrirCadastroAluno#0;class#PrincipalController#0" expanded="false" />
-                <element signature="method#abrirCadastroTCC#0;class#PrincipalController#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3996#4007#0" expanded="true" />
+                <element signature="method#initialize#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#ButtonNovo1Intregante#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#ButtonNovo2Intregante#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#ButtonNovo3Intregante#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#ButtonNovo4Intregante#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#limparCampos#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#carregarComboBox#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#buscarAluno1#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#buscarAluno2#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#buscarAluno3#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#buscarAluno4#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#buscarAluno5#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#ButtonBuscarTituloTcc#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#ButtonBuscarProfessorOrientador#0;class#GrupoTCCController#0" expanded="false" />
+                <element signature="method#salvarGrupo#0;class#GrupoTCCController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FuncionarioNegocio.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Negocio/FuncionarioNegocio.java">
+      <file leaf-file-name="CadastroAlunoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CadastroAlunoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="38" column="108" lean-forward="false" selection-start-line="38" selection-start-column="108" selection-end-line="38" selection-end-column="108" />
+            <state relative-caret-position="88">
+              <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="32" />
               <folding>
-                <element signature="method#salvarFuncionario#0;class#FuncionarioNegocio#0" expanded="false" />
-                <element signature="method#verificarLoginSenha#0;class#FuncionarioNegocio#0" expanded="false" />
-                <element signature="method#verificarListaLoginSenha#0;class#FuncionarioNegocio#0" expanded="false" />
+                <element signature="e#1275#1288#0" expanded="true" />
+                <element signature="method#salvar#0;class#CadastroAlunoController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Informacao.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Visao/Informacao.fxml">
+      <file leaf-file-name="CadastrarTCCController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CadastrarTCCController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="72" column="5" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="72" selection-end-column="5" />
+              <folding>
+                <element signature="method#initialize#0;class#CadastrarTCCController#0" expanded="false" />
+                <element signature="method#carregarCombobox#0;class#CadastrarTCCController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CadastroAluno.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Visao/CadastroAluno.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="329">
+              <caret line="42" column="74" lean-forward="false" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NTCC.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dump NTCC/NTCC.sql">
+      <file leaf-file-name="TCCNegocio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Negocio/TCCNegocio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="28" column="111" lean-forward="true" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
+              <folding>
+                <element signature="docComment;class#TCCNegocio#0" expanded="false" />
+                <element signature="method#salvarTCC#0;class#TCCNegocio#0" expanded="false" />
+                <element signature="method#buscarTCC#0;class#TCCNegocio#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CursoDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TCCDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dao/TCCDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+              <folding>
+                <element signature="method#salvar#0;class#TCCDAO#0" expanded="false" />
+                <element signature="method#buscarTcc#0;class#TCCDAO#0" expanded="false" />
+                <element signature="e#3875#3886#0" expanded="true" />
+                <marker date="1495474831963" expanded="true" signature="889:1031" ph="INSERT INTO ntcc.tcc... " />
+                <marker date="1495474831963" expanded="true" signature="2634:2651" ph="select * fro... tcc" />
+                <marker date="1495474831963" expanded="true" signature="3966:4006" ph="select * fro... tcc" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CursoDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dao/CursoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="79" column="52" lean-forward="true" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
+            <state relative-caret-position="-595">
+              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding>
                 <marker date="1494978221889" expanded="true" signature="704:747" ph="INSERT INTO ntcc.curso... " />
                 <marker date="1494978221889" expanded="true" signature="1789:1808" ph="select * fro... curso" />
@@ -140,45 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectDaoItil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAOItil/ConnectDaoItil.java">
+      <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PessoaNegocio.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Negocio/PessoaNegocio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TCCNegocio.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Negocio/TCCNegocio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="110" lean-forward="false" selection-start-line="28" selection-start-column="110" selection-end-line="28" selection-end-column="110" />
-              <folding>
-                <element signature="method#salvarTCC#0;class#TCCNegocio#0" expanded="false" />
-                <element signature="method#buscarTCC#0;class#TCCNegocio#0" expanded="false" />
-                <element signature="method#buscarTCCProfessorOrinetador#0;class#TCCNegocio#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="12" column="78" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="78" />
+            <state relative-caret-position="110">
+              <caret line="1126" column="0" lean-forward="false" selection-start-line="1126" selection-start-column="0" selection-end-line="1126" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -187,8 +199,20 @@
       <file leaf-file-name="ProfessorNegocio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Negocio/ProfessorNegocio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+            <state relative-caret-position="139">
+              <caret line="36" column="81" lean-forward="false" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
+              <folding>
+                <element signature="method#salvarProfessor#0;class#ProfessorNegocio#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GrupoTCCNegocio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Negocio/GrupoTCCNegocio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -237,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/Visao/BuscaDoc.fxml" />
         <option value="$PROJECT_DIR$/src/Visao/CadastrarFuncionario.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/CadastrarFuncionarioController.java" />
-        <option value="$PROJECT_DIR$/src/Visao/CadastroAluno.fxml" />
         <option value="$PROJECT_DIR$/src/Modelo/FuncionarioModelo.java" />
         <option value="$PROJECT_DIR$/src/Negocio/FuncionarioNegocio.java" />
         <option value="$PROJECT_DIR$/src/Dao/FuncionarioDAO.java" />
@@ -260,17 +283,18 @@
         <option value="$PROJECT_DIR$/src/Controller/PrincipalController.java" />
         <option value="$PROJECT_DIR$/src/Modelo/GrupoTCCModelo.java" />
         <option value="$PROJECT_DIR$/src/Dao/GrupoTCCDAO.java" />
-        <option value="$PROJECT_DIR$/src/Negocio/GrupoTCCNegocio.java" />
         <option value="$PROJECT_DIR$/src/Modelo/TCCModelo.java" />
         <option value="$PROJECT_DIR$/src/Dao/CursoDAO.java" />
-        <option value="$PROJECT_DIR$/src/Dao/TCCDAO.java" />
-        <option value="$PROJECT_DIR$/src/Negocio/TCCNegocio.java" />
         <option value="$PROJECT_DIR$/src/Dao/AlunoDAO.java" />
         <option value="$PROJECT_DIR$/src/Negocio/AlunoNegocio.java" />
         <option value="$PROJECT_DIR$/src/Visao/GrupoTCC.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/CadastroProfessorController.java" />
+        <option value="$PROJECT_DIR$/src/Negocio/GrupoTCCNegocio.java" />
+        <option value="$PROJECT_DIR$/src/Negocio/TCCNegocio.java" />
+        <option value="$PROJECT_DIR$/src/Dao/TCCDAO.java" />
         <option value="$PROJECT_DIR$/src/Controller/GrupoTCCController.java" />
         <option value="$PROJECT_DIR$/src/Controller/CadastroAlunoController.java" />
-        <option value="$PROJECT_DIR$/src/Controller/CadastroProfessorController.java" />
+        <option value="$PROJECT_DIR$/src/Visao/CadastroAluno.fxml" />
       </list>
     </option>
   </component>
@@ -324,6 +348,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NTCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Software Projeto integrador" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -496,21 +535,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NTCC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Software Projeto integrador" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1080,12 +1104,14 @@
       <workItem from="1495293916286" duration="8807000" />
       <workItem from="1495341550542" duration="10147000" />
       <workItem from="1495374532364" duration="15990000" />
-      <workItem from="1495392182121" duration="1819000" />
+      <workItem from="1495392182121" duration="2387000" />
+      <workItem from="1495424689272" duration="1232000" />
+      <workItem from="1495459715618" duration="10641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235530000" />
+    <option name="totallyTimeSpent" value="247971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -1101,7 +1127,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32492113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32492113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1175,7 +1201,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="40" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1184,91 +1210,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/beans/property/BooleanPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/Biblioteca/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="1595" column="20" lean-forward="true" selection-start-line="1595" selection-start-column="20" selection-end-line="1595" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="347" column="35" lean-forward="false" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/TextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="1657" column="0" lean-forward="false" selection-start-line="1657" selection-start-column="0" selection-end-line="1657" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8413" column="0" lean-forward="false" selection-start-line="8413" selection-start-column="0" selection-end-line="8413" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2720">
-          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26690">
-          <caret line="1770" column="38" lean-forward="false" selection-start-line="1770" selection-start-column="38" selection-end-line="1770" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/CursoModelo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/FuncionarioModelo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Negocio/CursoNegocio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visao/Menssagnes.fxml" />
     <entry file="file://$PROJECT_DIR$/src/Controller/MessagemController.java" />
     <entry file="file://$PROJECT_DIR$/src/Visao/GrupoTCC" />
     <entry file="file://$PROJECT_DIR$/src/Visao/CadastroProfessor.fxml">
@@ -1278,9 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="16" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <element signature="n#HBox#0;n#children#0;n#GridPane#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1291,7 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="48" lean-forward="false" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="52" column="45" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,7 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1324,7 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="72" column="11" lean-forward="false" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,40 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="87" selection-end-column="9" />
-          <folding>
-            <element signature="method#salvar#0;class#FuncionarioDAO#0" expanded="false" />
-            <element signature="method#buscar#0;class#FuncionarioDAO#0" expanded="false" />
-            <marker date="1494514135597" expanded="true" signature="738:821" ph="INSERT INTO ntcc.funcionario... " />
-            <marker date="1494514135597" expanded="true" signature="2224:2249" ph="select * fro... funcionario" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dao/GrupoTCCDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Negocio/GrupoTCCNegocio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/GrupoTCCModelo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/TCCModelo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1380,25 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-176">
           <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="method#salvar#0;class#ProfessorDAO#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dao/TCCDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="104" column="89" lean-forward="false" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#TCCDAO#0;class#TCCDAO#0" expanded="false" />
-            <element signature="method#salvar#0;class#TCCDAO#0" expanded="false" />
-            <marker date="1495377620079" expanded="true" signature="889:1031" ph="INSERT INTO ntcc.tcc... " />
-            <marker date="1495377620079" expanded="true" signature="2634:2648" ph="select * fro... curso" />
-            <marker date="1495377620079" expanded="true" signature="2634:2651" ph="select * fro... tcc" />
-            <marker date="1495377620079" expanded="true" signature="4013:4054" ph="select * fro... tcc" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1406,13 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#salvar#0;class#AlunoDAO#0" expanded="false" />
-            <element signature="method#buscarAluno#0;class#AlunoDAO#0" expanded="false" />
-            <marker date="1495380412242" expanded="true" signature="708:810" ph="INSERT INTO ntcc.aluno... " />
-            <marker date="1495380412242" expanded="true" signature="2309:2359" ph="select * fro... aluno" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1420,11 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="37" column="92" lean-forward="false" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#salvarAluno#0;class#AlunoNegocio#0" expanded="false" />
-            <element signature="method#buscarAluno#0;class#AlunoNegocio#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1439,26 +1308,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/GrupoTCCController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#3810#3826#0" expanded="true" />
-            <element signature="e#3873#3884#0" expanded="true" />
-            <element signature="e#3935#3948#0" expanded="true" />
-            <element signature="method#ButtonBuscarTituloTcc#0;class#GrupoTCCController#0" expanded="false" />
-            <element signature="method#ButtonBuscarProfessorOrientador#0;class#GrupoTCCController#0" expanded="false" />
-            <element signature="method#carregarComboBox#0;class#GrupoTCCController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AtaDeDefasaController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1466,28 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CadastrarTCCController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="method#initialize#0;class#CadastrarTCCController#0" expanded="false" />
-            <element signature="method#carregarCombobox#0;class#CadastrarTCCController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroAlunoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="93" column="4" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1503,7 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="62" column="56" lean-forward="false" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,7 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1519,7 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,69 +1355,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Negocio/PessoaNegocio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Negocio/ProfessorNegocio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Negocio/TCCNegocio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="110" lean-forward="false" selection-start-line="28" selection-start-column="110" selection-end-line="28" selection-end-column="110" />
-          <folding>
-            <element signature="method#salvarTCC#0;class#TCCNegocio#0" expanded="false" />
-            <element signature="method#buscarTCC#0;class#TCCNegocio#0" expanded="false" />
-            <element signature="method#buscarTCCProfessorOrinetador#0;class#TCCNegocio#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
+        <state relative-caret-position="136">
           <caret line="12" column="78" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PrincipalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="70" column="22" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
-          <folding>
-            <element signature="method#initialize#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#abrirCadastroProfessor#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#BuscarTCC#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#informacoes#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#gerarDeclaracao#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#ButtonEntrar#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#configuracao#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#abrirCadastroAluno#0;class#PrincipalController#0" expanded="false" />
-            <element signature="method#abrirCadastroTCC#0;class#PrincipalController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Negocio/FuncionarioNegocio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="272">
           <caret line="38" column="108" lean-forward="false" selection-start-line="38" selection-start-column="108" selection-end-line="38" selection-end-column="108" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#salvarFuncionario#0;class#FuncionarioNegocio#0" expanded="false" />
             <element signature="method#verificarLoginSenha#0;class#FuncionarioNegocio#0" expanded="false" />
             <element signature="method#verificarListaLoginSenha#0;class#FuncionarioNegocio#0" expanded="false" />
@@ -1624,15 +1413,272 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PrincipalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#initialize#0;class#PrincipalController#0" expanded="false" />
+            <element signature="method#abrirCadastroProfessor#0;class#PrincipalController#0" expanded="false" />
+            <element signature="e#1284#1285#0" expanded="false" />
+            <element signature="e#1315#1316#0" expanded="false" />
+            <element signature="method#BuscarTCC#0;class#PrincipalController#0" expanded="false" />
+            <element signature="method#informacoes#0;class#PrincipalController#0" expanded="false" />
+            <element signature="method#gerarDeclaracao#0;class#PrincipalController#0" expanded="false" />
+            <element signature="method#ButtonEntrar#0;class#PrincipalController#0" expanded="false" />
+            <element signature="e#2172#2173#0" expanded="false" />
+            <element signature="e#2203#2204#0" expanded="false" />
+            <element signature="method#configuracao#0;class#PrincipalController#0" expanded="false" />
+            <element signature="method#abrirCadastroAluno#0;class#PrincipalController#0" expanded="false" />
+            <element signature="method#abrirCadastroTCC#0;class#PrincipalController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/GrupoTCCModelo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/TCCModelo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dao/GrupoTCCDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1495359345706" expanded="true" signature="711:765" ph="INSERT INTO ntcc.grupo_tcc... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="1657" column="0" lean-forward="false" selection-start-line="1657" selection-start-column="0" selection-end-line="1657" selection-end-column="0" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/event/CompositeEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/event/BasicEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/event/EventDispatchChainImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="353" column="23" lean-forward="false" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/concurrent/locks/LockSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="943" column="0" lean-forward="false" selection-start-line="943" selection-start-column="0" selection-end-line="943" selection-end-column="0" />
+          <folding>
+            <element signature="e#36521#36522#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="2042" column="0" lean-forward="false" selection-start-line="2042" selection-start-column="0" selection-end-line="2042" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/concurrent/LinkedBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="441" column="0" lean-forward="false" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="1126" column="0" lean-forward="false" selection-start-line="1126" selection-start-column="0" selection-end-line="1126" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Negocio/TCCNegocio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="28" column="111" lean-forward="true" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
+          <folding>
+            <element signature="docComment;class#TCCNegocio#0" expanded="false" />
+            <element signature="method#salvarTCC#0;class#TCCNegocio#0" expanded="false" />
+            <element signature="method#buscarTCC#0;class#TCCNegocio#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Negocio/ProfessorNegocio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="36" column="81" lean-forward="false" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
+          <folding>
+            <element signature="method#salvarProfessor#0;class#ProfessorNegocio#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Negocio/GrupoTCCNegocio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dao/CursoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="79" column="52" lean-forward="true" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
+        <state relative-caret-position="-595">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
             <marker date="1494978221889" expanded="true" signature="704:747" ph="INSERT INTO ntcc.curso... " />
             <marker date="1494978221889" expanded="true" signature="1789:1808" ph="select * fro... curso" />
             <marker date="1494978221889" expanded="true" signature="2501:2541" ph="select * fro... curso" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dao/TCCDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+          <folding>
+            <element signature="method#salvar#0;class#TCCDAO#0" expanded="false" />
+            <element signature="method#buscarTcc#0;class#TCCDAO#0" expanded="false" />
+            <element signature="e#3875#3886#0" expanded="true" />
+            <marker date="1495474831963" expanded="true" signature="889:1031" ph="INSERT INTO ntcc.tcc... " />
+            <marker date="1495474831963" expanded="true" signature="2634:2651" ph="select * fro... tcc" />
+            <marker date="1495474831963" expanded="true" signature="3966:4006" ph="select * fro... tcc" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/GrupoTCCController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="113" column="17" lean-forward="false" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3996#4007#0" expanded="true" />
+            <element signature="method#initialize#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#ButtonNovo1Intregante#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#ButtonNovo2Intregante#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#ButtonNovo3Intregante#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#ButtonNovo4Intregante#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#limparCampos#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#carregarComboBox#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#buscarAluno1#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#buscarAluno2#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#buscarAluno3#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#buscarAluno4#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#buscarAluno5#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#ButtonBuscarTituloTcc#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#ButtonBuscarProfessorOrientador#0;class#GrupoTCCController#0" expanded="false" />
+            <element signature="method#salvarGrupo#0;class#GrupoTCCController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CadastrarTCCController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="method#initialize#0;class#CadastrarTCCController#0" expanded="false" />
+            <element signature="method#carregarCombobox#0;class#CadastrarTCCController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CadastroAlunoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="32" />
+          <folding>
+            <element signature="e#1275#1288#0" expanded="true" />
+            <element signature="method#salvar#0;class#CadastroAlunoController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visao/CadastroAluno.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="42" column="74" lean-forward="false" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
