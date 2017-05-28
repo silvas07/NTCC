@@ -66,4 +66,9 @@ public class FuncionarioNegocio extends PessoaNegocio {
 
     }
 
+    public void editar(String senha , String matricula) throws SQLException {
+        funcionarioDAO.editar(senha , matricula);
+
+    }
+
 }

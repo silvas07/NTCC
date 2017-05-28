@@ -65,7 +65,7 @@ public class PrincipalController implements Initializable {
     }
 
     public void gerarDeclaracao(ActionEvent actionEvent) throws IOException {
-       caminhoTela("/Visao/DeclaracaoTCC.fxml");
+       caminhoTela("/Visao/DeclaracaoBanca.fxml");
     }
 
     public void ButtonEntrar(ActionEvent actionEvent) throws IOException, SQLException {
@@ -101,6 +101,10 @@ public class PrincipalController implements Initializable {
         caminhoTela("/Visao/GrupoTCC.fxml");
     }
 
+    public void CadastrarProfessorLeitor(ActionEvent actionEvent) throws IOException {
+        caminhoTela("/Visao/AddProfessorLeitor.fxml");
+    }
+
     public void caminhoTela (String caminho) throws IOException {
         URL arquivoFXML;
         arquivoFXML = getClass().getResource(caminho);
@@ -108,5 +112,6 @@ public class PrincipalController implements Initializable {
         CentroPrincipal.getChildren().clear();
         CentroPrincipal.getChildren().add(fxmlParent);
     }
+
 
 }

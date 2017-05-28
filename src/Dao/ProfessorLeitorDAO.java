@@ -1,42 +1,34 @@
 package Dao;
 
 import DAOItil.ConnectDaoItil;
-import Modelo.CursoModelo;
+import Modelo.ProfessorLeitorModelo;
 import Modelo.ProfessorModelo;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Created by rdsdo on 01/05/2017.
+ * Created by rdsdo on 28/05/2017.
  */
-public class ProfessorDAO {
-
-
+public class ProfessorLeitorDAO {
     private Connection connection;
     private Statement statement;
     private PreparedStatement preparedStatement;
 
-    public ProfessorDAO() {
+    public ProfessorLeitorDAO () {
         ConnectDaoItil connectDaoItil  = new  ConnectDaoItil();
         connection = connectDaoItil.abrirCanneccao();
     }
 
-    public String salvar (ProfessorModelo professorModelo) throws SQLException {
+    public String salvarProfessorLeitor (ProfessorLeitorModelo professorLeitorModelo) throws SQLException {
         String salvo = "falha";
 
         try {
 
             connection.setAutoCommit(false);
-            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.professor(nome,sobrenome,genero,email,matricula,titulacao,telefone)VALUES(?,?,?,?,?,?,?)");
-            preparedStatement.setString(1,professorModelo.getNome());
-            preparedStatement.setString(2,professorModelo.getSobrenome());
-            preparedStatement.setString(3,professorModelo.getGenero());
-            preparedStatement.setString(4,professorModelo.getEmail());
-            preparedStatement.setString(5,professorModelo.getMatricula());
-            preparedStatement.setString(6,professorModelo.getTitulacao());
-            preparedStatement.setString(7,professorModelo.getTelefone());
+            preparedStatement = connection.prepareStatement("INSERT INTO ntcc.professor_leitor(id_professor,id_tcc)VALUES(?,?)");
+            preparedStatement.setInt(1,professorLeitorModelo.getIdProfessor());
+            preparedStatement.setInt(2,professorLeitorModelo.getIdTcc());
+
             preparedStatement.executeUpdate();
             connection.commit();
 
@@ -59,7 +51,7 @@ public class ProfessorDAO {
         return salvo;
     }
 
-    public ProfessorModelo buscarProfessorOrientador (String matricula , String nome) throws SQLException{
+   /* public ProfessorModelo buscarProfessorOrientador (String matricula , String nome) throws SQLException{
 
         ResultSet resposta = null;
         ProfessorModelo professorModelo = new ProfessorModelo();
@@ -89,8 +81,5 @@ public class ProfessorDAO {
         }
 
         return professorModelo ;
-    }
-
-
-
+    }*/
 }

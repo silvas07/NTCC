@@ -34,7 +34,7 @@ public class TCCDAO {
             try {
                 connection.setAutoCommit(false);
                 preparedStatement = connection.prepareStatement("INSERT INTO ntcc.tcc(tipo_tcc,titulo,data_inicio,data_fim," +
-                        "id_Curso,id_professor,id_grupoTCC)VALUES(?,?,?,?,?,?,?)");
+                        "id_Curso,id_professor)VALUES(?,?,?,?,?,?)");
 
                 preparedStatement.setString(1,tccModelo.getTipoTCC());
                 preparedStatement.setString(2, tccModelo.getTitulo());
@@ -42,7 +42,7 @@ public class TCCDAO {
                 preparedStatement.setDate(4, Date.valueOf(tccModelo.getDataFim()));
                 preparedStatement.setInt(5,tccModelo.getIdCurso());
                 preparedStatement.setInt(6, tccModelo.getIdProfessor());
-                preparedStatement.setInt(7,tccModelo.getIdGrupoTCC());
+
 
 
 
@@ -90,7 +90,7 @@ public class TCCDAO {
                     tccModelo.setDataFim(data.toLocalDate());
                     tccModelo.setIdCurso(resposta.getInt("id_Curso"));
                     tccModelo.setIdProfessor(resposta.getInt("id_professor"));
-                    tccModelo.setIdGrupoTCC(resposta.getInt("id_grupoTCC"));
+
 
 
                     listTCC.add(tccModelo);
@@ -124,7 +124,7 @@ public class TCCDAO {
                 tccModelo.setDataFim(data.toLocalDate());
                 tccModelo.setIdCurso(resposta.getInt("id_Curso"));
                 tccModelo.setIdProfessor(resposta.getInt("id_professor"));
-                tccModelo.setIdGrupoTCC(resposta.getInt("id_grupoTCC"));
+
 
                 listTCC.add(tccModelo);
 

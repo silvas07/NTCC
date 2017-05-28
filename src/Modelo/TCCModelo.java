@@ -14,7 +14,7 @@ public class TCCModelo {
     private LocalDate dataFim;
     private int idCurso;
     private int idProfessor;
-    private int idGrupoTCC;
+
 
     public int getId() {
         return id;
@@ -72,11 +72,5 @@ public class TCCModelo {
         this.idProfessor = idProfessor;
     }
 
-    public int getIdGrupoTCC() {
-        return idGrupoTCC;
-    }
 
-    public void setIdGrupoTCC(int idGrupoTCC) {
-        this.idGrupoTCC = idGrupoTCC;
-    }
 }

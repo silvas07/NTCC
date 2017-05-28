@@ -1,0 +1,55 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.HBox?>
+<GridPane hgap="5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="680" prefWidth="830" vgap="20" xmlns="http://javafx.com/javafx/8.0.112"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddProfessorLeitorController">
+    <padding>
+        <Insets bottom="20" left="10" right="10" top="20" />
+    </padding>
+
+    <Label alignment="CENTER" prefHeight="36.0" prefWidth="614.0" text="Cadastro de professores leitores " GridPane.columnSpan="5" GridPane.rowIndex="0">
+        <font>
+            <Font name="System Bold" size="25" />
+        </font>
+    </Label>
+
+    <Label fx:id="LabelTituloTcc" text="Titulo do TCC:" GridPane.columnIndex="0" GridPane.rowIndex="1">    </Label>
+    <ComboBox fx:id="ComboBoxTituloTcc" editable="true" prefHeight="25.0" prefWidth="549.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+    <Button fx:id="ButtonTituloTcc" onAction="#ButtonBuscarTituloTcc" text="Buscar" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+    <Label fx:id="LabelProfessorOrientador" text="Professor orientador:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="TextFieldProfessorOrientador" prefHeight="25.0" prefWidth="308.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label fx:id="LabelMatriculaProfessorOrientador" prefHeight="8.0" prefWidth="52.0" text="Matricula:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <TextField fx:id="TextFieldMatriculaProfessorOrientador" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    <Button fx:id="ButtonProfessorOrientador" onAction="#ButtonBuscarProfessorOrientador" text="Buscar" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+
+    <Label fx:id="LabelProfessorLeitor1" text="Professor Leitor:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="TextFieldProfessorLeitor1" prefHeight="25.0" prefWidth="308.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label fx:id="LabelMatriculaProfessorleitor1" prefHeight="8.0" prefWidth="52.0" text="Matricula:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <TextField fx:id="TextFieldMatriculaProfessorLeitor1" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+    <Button fx:id="ButtonProfessorLeitor1" onAction="#ButtonBuscarProfessorLeitor1" text="Buscar" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+
+    <Label fx:id="LabelProfessorLeitor2" text="Professor Leitor:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="TextFieldProfessorLeitor2" prefHeight="25.0" prefWidth="308.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label fx:id="LabelMatriculaProfessorLeitor2" prefHeight="8.0" prefWidth="52.0" text="Matricula:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <TextField fx:id="TextFieldMatriculaProfessorLeitor2" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+    <Button fx:id="ButtonProfessorLeitor2" onAction="#ButtonBuscarProfessorLeitor2" text="Buscar" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+
+    <HBox  alignment="CENTER" spacing="5"  GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="5">
+        <Button onAction="#salvarProfessor" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+        <Button onAction="#cancelarProfessor" text="Cancelar" />
+    </HBox>
+
+
+
+
+
+
+</GridPane>

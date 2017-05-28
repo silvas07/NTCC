@@ -87,5 +87,27 @@ public class FuncionarioDAO {
 
         }
 
+    public String editar(String senha , String matricula) throws SQLException {
+        String salvo = "falha";
+        try {
+            connection.setAutoCommit(false);
+            preparedStatement = connection.prepareStatement("update funcionario set senha= ? where matricula = ?");
+
+
+            preparedStatement.setString(1, senha );
+            preparedStatement.setString(2,matricula);
+
+
+            preparedStatement.executeUpdate();
+            connection.commit();
+            salvo = "salvo";
+
+
+        }catch (Exception e){
+            System.out.println("erro ao atualizar " + e.getMessage());
+            salvo = e.getMessage();
+        }
+        return salvo;
+    }
     }
 

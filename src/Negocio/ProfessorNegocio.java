@@ -1,6 +1,8 @@
 package Negocio;
 
 import Dao.ProfessorDAO;
+import Dao.ProfessorLeitorDAO;
+import Modelo.ProfessorLeitorModelo;
 import Modelo.ProfessorModelo;
 import java.sql.SQLException;
 
@@ -11,6 +13,7 @@ import java.sql.SQLException;
 public class ProfessorNegocio extends PessoaNegocio {
     ProfessorDAO professorDAO = new ProfessorDAO();
     ProfessorModelo professorModelo = new ProfessorModelo();
+    ProfessorLeitorDAO professorLeitorDAO = new ProfessorLeitorDAO();
 
 
     public void salvarProfessor (ProfessorModelo professorModelo) throws SQLException {
@@ -37,6 +40,11 @@ public class ProfessorNegocio extends PessoaNegocio {
     public ProfessorModelo buscarProfessorOrientador (String matricula , String nome) throws SQLException{
         professorModelo = professorDAO.buscarProfessorOrientador(matricula,nome);
         return professorModelo;
+    }
+
+    public void salvarProfessorLeitor (ProfessorLeitorModelo professorLeitorModelo) throws SQLException {
+        professorLeitorDAO.salvarProfessorLeitor(professorLeitorModelo);
+
     }
 
 

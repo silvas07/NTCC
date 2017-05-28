@@ -23,9 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-/**
- * Created by rdsdo on 19/05/2017.
- */
+
 public class GrupoTCCController implements Initializable {
 
     @FXML
@@ -269,7 +267,7 @@ public class GrupoTCCController implements Initializable {
     public void carregarComboBox () throws SQLException {
         for (int i = 0 ; i < listTCC.size() ; i++){
             tccModelo = listTCC.get(i);
-            ComboBoxTituloTcc.getItems().addAll(tccModelo.getTitulo());
+            ComboBoxTituloTcc.getItems().addAll(tccModelo.getTitulo() + " (" + tccModelo.getTipoTCC() + ")");
         }
 
     }

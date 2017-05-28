@@ -1,13 +1,16 @@
 package Controller;
 
 
+import Dao.DocumentoDAO;
 import Modelo.CursoModelo;
+import Modelo.DocumentoModelo;
 import Modelo.FuncionarioModelo;
 import Negocio.CursoNegocio;
 import Negocio.FuncionarioNegocio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -35,11 +38,23 @@ public class ConfiguracaoController implements Initializable {
     private  PasswordField PasswordFieldRepitaSenha;
     @FXML
     private TextField TextFieldCurso;
+    @FXML
+    private TextField TextFieldMatriculaFuncionariaRecuparar;
+    @FXML
+    private PasswordField PasswordFieldSenhaRecuperar;
+    @FXML
+    private  PasswordField PasswordFieldRepitaSenhaRecuperar;
+    @FXML
+    private Label LabelMenssagemRecuperar ;
+    @FXML
+    private TextField TextFieldDocumento;
 
     FuncionarioModelo funcionarioModelo = new FuncionarioModelo();
     FuncionarioNegocio funcionarioNegocio = new FuncionarioNegocio();
     CursoModelo cursoModelo = new CursoModelo();
     CursoNegocio cursoNegocio = new CursoNegocio();
+    DocumentoModelo documentoModelo = new DocumentoModelo();
+    DocumentoDAO documentoDAO = new DocumentoDAO();
 
 
 
@@ -99,4 +114,52 @@ public class ConfiguracaoController implements Initializable {
     public void cancelarCruso(ActionEvent actionEvent) {
         TextFieldCurso.setText("");
     }
+
+
+    public void cancelarrecuperar(ActionEvent actionEvent) {
+        limparRecuperaSenha();
+
+    }
+
+    public void recuperar(ActionEvent actionEvent) throws SQLException {
+        editarsenha();
+    }
+
+    public void limparRecuperaSenha(){
+        TextFieldMatriculaFuncionariaRecuparar.setText("");
+        PasswordFieldRepitaSenhaRecuperar.setText("");
+        PasswordFieldSenhaRecuperar.setText("");
+        LabelMenssagemRecuperar.setText("");
+
+    }
+
+    public void editarsenha () throws SQLException {
+        if(PasswordFieldSenhaRecuperar.getText().equals(PasswordFieldRepitaSenhaRecuperar.getText())){
+
+            funcionarioNegocio.editar(PasswordFieldSenhaRecuperar.getText() , TextFieldMatriculaFuncionariaRecuparar.getText());
+            limparRecuperaSenha();
+        }else {
+            LabelMenssagemRecuperar.setText("Senhas estão diferentes.");
+        }
+    }
+
+    public void salvarDocumento(ActionEvent actionEvent) throws SQLException {
+        salvarDocumento();
+    }
+
+    public void cancelarDocumento(ActionEvent actionEvent) {
+        limparDocumento();
+    }
+
+    public  void salvarDocumento () throws SQLException{
+        if (!TextFieldDocumento.getText().equals("")){
+            documentoModelo.setNomeDocumento(TextFieldDocumento.getText());
+            documentoDAO.salvarDocumento(documentoModelo);
+            limparDocumento();
+        }
+    }
+    public void limparDocumento(){
+        TextFieldDocumento.setText("");
+    }
+
 }

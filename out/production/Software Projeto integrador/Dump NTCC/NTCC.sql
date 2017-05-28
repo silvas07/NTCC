@@ -23,6 +23,7 @@ USE `ntcc`;
 
 LOCK TABLES `aluno` WRITE;
 /*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
+INSERT INTO `aluno` VALUES (1,'rubens diego','santana de oliveira','Masculino','rdsdo100@gmail.com','20151043002','sistema de informação',NULL,'499345'),(2,'Alan','Carlos','Masculino','alan@gmail.com','20161043005','sistemas de informação',NULL,'0000000'),(3,'Regis Diogo','Santana de Oliveira','Masculino','regis@gmail.com','20171043002','Engenharia da Computação',NULL,'2316546');
 /*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -32,17 +33,8 @@ UNLOCK TABLES;
 
 LOCK TABLES `curso` WRITE;
 /*!40000 ALTER TABLE `curso` DISABLE KEYS */;
-INSERT INTO `curso` VALUES (1,'sistema de informação'),(2,'pedagogia'),(3,'Engenharia Civil'),(4,'Engenharia da Computação');
+INSERT INTO `curso` VALUES (1,'sistema de informação'),(2,'pedagogia'),(3,'Engenharia Civil'),(4,'Engenharia da Computação'),(5,'Direito');
 /*!40000 ALTER TABLE `curso` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `documentosalvos`
---
-
-LOCK TABLES `documentosalvos` WRITE;
-/*!40000 ALTER TABLE `documentosalvos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `documentosalvos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -53,6 +45,16 @@ LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
 INSERT INTO `funcionario` VALUES (1,'rubens','diego','20151043002','root','root'),(2,'rubens','diego','20151043002','rdsdo','rubens100'),(3,'camila','soares','201419324','camila','123');
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `grupo_tcc`
+--
+
+LOCK TABLES `grupo_tcc` WRITE;
+/*!40000 ALTER TABLE `grupo_tcc` DISABLE KEYS */;
+INSERT INTO `grupo_tcc` VALUES (3,14,1),(4,14,2),(5,14,1),(6,14,2),(7,15,1),(8,15,1),(9,15,2),(10,15,1);
+/*!40000 ALTER TABLE `grupo_tcc` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -70,7 +72,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `professor` WRITE;
 /*!40000 ALTER TABLE `professor` DISABLE KEYS */;
-INSERT INTO `professor` VALUES (1,'murilo','pecheco','Masculino','mur@ff.com','2548','mestre',NULL),(2,'rubens diego','santana de oliveiara','Masculino','rdsdo2011@gmail.com','20151043002','mestre',NULL);
+INSERT INTO `professor` VALUES (4,'rubens','diego','Masculino','rdsdo100@hotmail.com','123456','meste',NULL);
 /*!40000 ALTER TABLE `professor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,25 +82,8 @@ UNLOCK TABLES;
 
 LOCK TABLES `tcc` WRITE;
 /*!40000 ALTER TABLE `tcc` DISABLE KEYS */;
+INSERT INTO `tcc` VALUES (14,NULL,'dd25','2017-05-12','2017-05-18',2,4,0),(15,'TCC II','dd','2017-05-12','2017-05-18',2,4,0);
 /*!40000 ALTER TABLE `tcc` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `tefefone`
---
-
-LOCK TABLES `tefefone` WRITE;
-/*!40000 ALTER TABLE `tefefone` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tefefone` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `tipo_professor`
---
-
-LOCK TABLES `tipo_professor` WRITE;
-/*!40000 ALTER TABLE `tipo_professor` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tipo_professor` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -118,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-17  8:50:40
+-- Dump completed on 2017-05-22 19:46:30
